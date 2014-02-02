@@ -1,0 +1,22 @@
+<settings> 
+	<!-- Боковая сторона справа: -->
+	<grid>
+		<x>
+			<approx_count>9</approx_count>
+		</x>
+	</grid>
+	<graphs>
+		<graph gid="1">
+			<title>Посетителей</title>
+			<selected>true</selected>
+		</graph>
+		<graph gid="2">
+			<title>Посещений</title>
+			<selected>true</selected>
+		</graph>
+		<graph gid="3">
+			<title>Страниц</title>
+			<selected>true</selected>
+		</graph>
+	</graphs>
+</settings>

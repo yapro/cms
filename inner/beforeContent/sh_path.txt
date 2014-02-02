@@ -1,0 +1,4 @@
+в /inner/beforeContent.php добавить
+include($_SERVER['DOCUMENT_ROOT'].'/inner/beforeContent/sh_path.php');
+выводится строка через echo $this->SHPathStr;
+выпадающие меню находятся в {~$this->SHPathCode~}

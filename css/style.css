@@ -1,0 +1,545 @@
+/* column container */
+.colmask {
+	position:relative;	/* This fixes the IE7 overflow hidden bug */
+	clear:both;
+	float:left;
+	width:100%;			/* width of whole page */
+	overflow:hidden;		/* This chops off any overhanging divs */
+}
+/* common column settings */
+.colright,
+.colmid,
+.colleft {
+	float:left;
+	width:100%;
+	position:relative;
+}
+.col1,
+.col2,
+.col3 {
+	float:left;
+	position:relative;
+	padding:0 0 1em 0;
+	overflow:hidden;
+}
+/* 2 Column (left menu) settings */
+.leftmenu {
+	/*background:#fff; 		right column background colour */
+}
+.leftmenu .colleft {
+	/* right column width */
+	right:78%;			/* внешняя ширина правой колонки | R_width_outer */
+	/* 	background:#CCC;left column background colour */
+}
+.leftmenu .col1 {
+	/* right column content width */
+	width:76%;			/* внутренняя ширина правой колонки | R_width_inner ( должна быть меньше чем R_width_outer ) */
+	/* 100% plus left column left padding */
+	left:102%;			/* паддинг слева для R_width_inner, рассчитывается как 100% + необходимый паддинг слева */
+	/*background-color:#FFCCCC;*/
+}
+.leftmenu .col2 {
+	/* left column content width (column width minus left and right padding) */
+	width:22%;			/* ширина левой колонки | L_width_inner */
+	/* (right column left and right padding) plus (left column left padding) */
+	left:2%;/* L_margin_rl это сумма левого и правого маржина для L_width_inner. Рассчитывается как L_margin_rl + (L_margin_rl/2) */
+	/* background-color:#FFFFCC;	left inner column background colour */
+}
+/* Footer styles */
+#footer {
+	clear:both;
+	float:left;
+	width:100%;
+}
+BODY {
+	font-size: 13px;
+	line-height: 1.3;
+	background-repeat: repeat-x;
+	background-position: left top;
+	color:#464646;/*89717C*/
+}
+A {/*:link - ещё не посещал*/
+	text-decoration: none;
+	color: #0088CC;
+	background: none;
+}
+A:hover {/*указатель мыши находится на ссылке*/
+	color: #2471A7
+}
+A:active {/*в момент клика на ссылку*/
+	color: #faa700;
+}
+A:visited {/*уже посещал эту ссылку*/
+	color: #7CBBE6;
+}
+A:hover:visited {/*указатель мыши находится на ссылке И уже посещал эту ссылку*/
+	color: #297EB9
+}
+
+
+
+/* Центрируем блок */
+.centerOuter {
+	text-align: center;/* для ИЕ в quirks mode и для ИЕ младше ИЕ6 */
+}
+.centerInner {
+    margin: 0 auto;/* для нормальных браузеров и для ИЕ в strict mode*/
+    text-align: left;
+}
+
+#body {
+    /*border: 1px dashed;*/
+    margin-top:97px;
+}
+/* скрываем нужные элементы */
+.Hidden, .hidden {
+	position: absolute;
+	top: -7777777px;
+	left: -7777777px;
+}
+
+/* верхнее меню */
+#topMenu {
+	position: absolute;
+	top: 0px;
+	left: 0%;
+	width: 100%;
+}
+#topMenu A {
+	border: none;
+}
+#topMenu A#lock {
+	padding-left:17px;
+	background:url(/images/lock.png) no-repeat;
+}
+#topMenu SPAN {
+	color:#CCC;
+	margin: 0 10px;
+}
+
+/* Ошибка в тексте */
+#SpellingStr, #SpellingStr SPAN {
+	line-height: 23px;
+	color: #5F5E62 !important;
+	font-size: 12px !important;
+	margin: 0 !important;
+}
+SPAN.keyButton {
+	background:none repeat scroll 0 0 #ECECEC;
+	border-color:#FFFFFF #BBB8AB #BBB8AB #FFFFFF;
+	border-style:solid;
+	border-width:1px;
+	padding:1px 4px;
+}
+/* Личный кабинет */
+#user_home_link {
+	background: url(/images/settings-icon.png) no-repeat;
+	padding: 0 0 0 21px;
+}
+#user_logout_link {
+	background: url(/images/user_auth_link.png) no-repeat;
+	padding: 0 0 0 21px;
+}
+/* мои закладки */
+#pages_bookmarks {
+	background: url(/js/bookmarks/bookmarks.png) no-repeat 0 -31px;
+	padding: 0 0 0 21px;
+}
+/* любимое видео */
+#pages_favourites {
+	background: url(/images/likes.png) no-repeat left bottom;
+	padding: 0 0 0 21px;
+}
+/* Wrapped by Lebnik */
+.wrap_outer { width:100%; table-layout: fixed; display: table; *display: block }
+/* table-layout: fixed - в данном месте нужен для любого браузера кроме IE7 */
+.wrap_outer .wrap_inner { white-space: pre-line; word-wrap: break-word; width: 100%; overflow: auto }
+html*.wrap_outer .wrap_inner { line-height:30px }/* IE */
+.wrap_outer PRE { padding: 0px; border: none; }
+.wrap_inner {
+	font-family: Arial,Helvetica,Tahoma,sans-serif;
+}
+
+#innerArticleActions {
+	font-size: 11px;
+	border-top: 1px dashed #CCCCCC;
+	border-bottom: 1px dashed #CCCCCC;
+	padding: 10px 0px;
+}
+/* Рейтинги */
+#innerArticleActions .rating_center {
+	vertical-align: top;
+}
+#innerArticleActions TD.nowrap {
+	white-space: nowrap;
+	padding-right: 11px !important;
+}
+#innerArticleActions .online {
+	margin-left:10px;
+}
+.TableRating {
+	background-color: #FFF;
+	padding: 0px 3px 0px;
+}
+.TableRating .estimate {
+	text-align: center;
+}
+.TableRating.Hidden {
+	box-shadow: 0 0 10px #CCC;
+}
+
+/* Листинг страниц */
+.Listing {
+	/*border: 1px solid #CCC;*/
+	padding:5px;
+	text-align:center;
+	line-height:25px;
+	/*margin-bottom: 15px
+	background-color: #FFF;
+	font-size: 1.4em;*/
+	border-top: 1px dashed #CCCCCC;
+}
+.Listing .inThePresent { margin-right:5px }
+.Listing SPAN { padding: 3px 5px }
+.Listing A {
+	text-decoration:none;
+	white-space: nowrap
+}
+.Listing A:hover {
+	color: #FF0000;
+	border-bottom: #FF0000 1px solid;
+}
+.Listing EM {
+	color: #000000;
+	background-color: #ECEDF3;/*FFFF00*/
+	border: #FFCCCC 1px dotted;
+	white-space: nowrap;
+	margin:0 -5px;
+	padding:0 5px;
+	font-style:normal;
+}
+.Listing .inThePast {
+	padding-left: 5px;
+}
+/* закругленные уголки */
+.round {
+	border: 1px solid #FFF;
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	-o-border-radius: 15px;
+	-khtml-border-radius: 15px;
+}
+.Site {
+	width: 976px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* настройки SHPath [ */
+#SHPath {
+	position: absolute;
+	z-index: 10;
+	top: 130px;
+	left: 3%;
+	font-style: italic;
+}
+#SHPath A {
+	font-size: 0.9em;
+	font-style: italic;
+}
+.SHPathSubMenu DIV P {
+	padding:0 5px;
+}
+.SHPathSubMenu DIV P A {
+	white-space: nowrap;
+	font-size: 0.9em;
+	font-style:italic;
+	line-height:25px;
+}
+/* настройки SHPath ] */
+
+
+
+/* Альтернативный Javascript-поиск от Google */
+.myGoogleSearchStyles .gsc-control {
+	width: 100%;
+}
+.myGoogleSearchStyles .gsc-tabsArea, 
+.myGoogleSearchStyles .gs-watermark, 
+.myGoogleSearchStyles .gsc-resultsHeader, 
+.myGoogleSearchStyles .gs-result a.gs-visibleUrl, 
+.myGoogleSearchStyles .gs-result .gs-visibleUrl {
+	display: none;
+}
+.gsc-results .gsc-cursor-box .gsc-cursor-page {
+	color:#0088CC;
+	cursor:pointer;
+	display:inline;
+	margin-right:8px;
+	text-decoration:none;
+}
+.myGoogleSearchStyles .gsc-result {
+	margin-bottom: 17px;
+}
+.myGoogleSearchStyles .gsc-cursor-current-page {
+	color:#FF0000 !important;
+}
+
+
+
+/* комментарии */
+#commentUserReg {
+	margin-bottom: 7px;
+}
+#textareaTable {
+	margin-bottom: 7px;
+}
+.ajax_comment_form {
+	border: 1px solid #CCC;
+	padding: 3px 5px;
+	/*margin-left: 240px;*/
+	color:#999999;
+	cursor: text;
+}
+
+
+
+/* для более удобного просмотра полноразмерных страниц */
+#fancybox-wrap {
+	padding: 0 !important;
+	margin-top: 33px;
+}
+
+/* тень для всплывающих блоков */
+.shadow {
+	border: 1px solid #CCC;
+	-moz-box-shadow:0px 0px 10px #CCC;
+	-webkit-box-shadow:0px 0px 10px #CCC;
+	box-shadow:0px 0px 10px #CCC;
+}
+
+
+
+
+#menu_left, #menu_left UL {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+#menu_left LI {
+	list-style-image: none;
+	padding: 0px;
+	margin:0;
+	line-height: normal;
+}
+#menu_left a {
+	display: block;
+	padding: 5px 10px;
+	text-decoration: none;
+}
+#menu_left a {
+    line-height: 41px;
+    padding: 0 0 0 30px;
+    text-decoration: none;
+    border-bottom: 1px dashed #CCC;
+}
+#menu_left LI {
+	padding: 0;
+}
+#menu_left LI LI {
+	padding-left: 20px;
+}
+#menu_left a:hover,
+#menu_left a.selected {
+	font-weight:bold;
+}
+#menu_left LI.root-item-latest A {
+	border-bottom: none;
+}
+
+
+
+
+#footer {
+	padding-top: 25px;
+}
+
+
+
+#commentForm {
+	font-size: 12px;
+}
+#commentForm .textarea, #commentForm .input DIV {
+	background-color: #FFF;
+}
+
+
+
+H3 {
+    padding-bottom: 9px;
+}
+
+
+
+#searchForm {
+	margin-top:15px;
+	margin-bottom:15px;
+}
+#searchFormResult {
+	margin-bottom:15px;
+}
+#searchForm TD {
+	vertical-align:top;
+}
+#searchForm .SearchLeft {
+	font-weight:bold;
+	padding: 0 0 15px;
+	text-align: right;
+}
+
+
+/* Поисковые стили */
+.SearchForm { }
+.Search { }
+.Search TABLE {
+	text-align: right;
+	height:19px;
+	width: 100%;
+}
+.Search TD {
+	border: 0px none !important;
+}
+TD.SearchSubmit, TD.SearchField, TD.SearchRight {
+	background: transparent url(/images/search.png) no-repeat !important;
+}
+TD.SearchSubmit { 
+	border: 0px none;
+	padding: 0px;
+	width: 19px;
+}
+TD.SearchSubmit INPUT { 
+	border: 0px none; 
+	padding: 0px; 
+	width: 19px;
+	background: transparent !important;
+	cursor: pointer;
+	font-size: 12px;/* должно быть равным 12 px для IE 7 */
+}
+TD.SearchField { 
+	border: 0px none;
+	padding: 0px;
+	background-repeat: repeat-x !important;
+	background-position: 0 -19px !important;
+}
+TD.SearchField INPUT { 
+	border: 0px none; 
+	padding: 0px; 
+	width: 100%;
+	background: transparent;
+	font-family: Arial,Helvetica,sans-serif; 
+	font-style:oblique;
+	text-align: left; 
+	outline:none;/* fix чтобы убрать выделение подсветкой в Safari */
+	margin:0px;
+}
+TD.SearchRight {
+	border: 0px none;
+	padding: 0px;
+	background-position: 0 -38px !important;
+	width: 10px;
+}
+.Search INPUT {
+	padding: 1px 0px 0px 0px !important;
+	margin: 0px;
+}
+/* хак под Safari и Chrome: */
+@media screen and (-webkit-min-device-pixel-ratio:0){
+body:first-of-type .Search INPUT { padding-top: 2px !important; }
+}
+/* результат поиска */
+.SearchResult {
+	padding: 10px 0px 10px 0px;
+}
+
+
+
+.box-head {
+	padding-bottom:10px;
+}
+
+
+/* правила Анонсов */
+.KidsNotice {
+	margin: 0 0 15px;
+}
+.KidsNotice TD.Right {
+	padding: 0 15px;
+	vertical-align: top;
+}
+.KidsNotice DIV.name A {
+	font-size: 18px !important;
+	border: none !important;
+	font-family:Georgia,"Times New Roman",Times,serif;
+	text-shadow:0 1px 1px #CCCCCC;
+}
+.KidsNotice DIV.footer {
+	padding: 5px 0;
+	font-size: 11px;
+	color: #5F5E62;
+}
+.KidsNotice DIV.footer * {
+	font-size: 11px;
+	/*color: #5F5E62;*/
+}
+.KidsNotice DIV.footer .comments {
+	background: url(/js/comments/comment.gif) no-repeat 10px 2px;
+	padding-left: 27px;
+	padding-bottom:1px;
+}
+.KidsNotice DIV.footer .read {
+	background: url(/images/read.gif) no-repeat 10px 2px;
+	padding-left: 27px;
+	padding-bottom:1px;
+}
+.KidsNotice TD:first-child {
+	vertical-align: top;
+}
+.KidsNotice IMG:first-child {
+	border: 1px solid #EBEBEB;
+	padding: 2px;
+}
+.cut {
+	height:7px;
+	border-top: 1px dashed #CCC;
+	clear:both;
+	padding-bottom:10px;
+}

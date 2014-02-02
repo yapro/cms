@@ -1,0 +1,30 @@
+a.bookmarks {
+	height: 15px;
+	text-decoration: none;
+	/*font-size: 11px;*/
+	line-height: normal;
+	margin: 0px !important;
+	padding: 0 3px 0 21px !important;
+	background: url("/js/bookmarks/bookmarks.png") no-repeat 0 -1px;/* фон с звездочками */
+}
+a.bookmarks:hover {
+	background-position: 0 -16px;
+}
+a.bookmarks:active, 
+a.bookmarks:hover, 
+a.bookmarks:visited, 
+a.bookmarks:hover:visited {
+	outline: medium none;
+}
+a.bookmarks.selected {
+	background-position: 0 -31px;
+}
+/*a.bookmarks.floated {
+	display:block;
+	float: left;
+	width: 16px;
+	text-indent: -9000px;
+	font-size: 11px;
+	margin: 0px !important;
+	padding:0px !important;
+}*/

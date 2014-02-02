@@ -1,0 +1,197 @@
+* {
+	padding: 0;
+	margin: 0;
+	font: 12px Arial, Helvetica, sans-serif;
+}
+BODY { color:#000000; }
+TEXTAREA, BODY {
+	overflow: auto;
+}
+TEXTAREA, INPUT {
+	font-family: verdana, helvetica;
+}
+TEXTAREA { border: 1px solid #CCCCCC; }
+.input_text, .datepickerTimeField, .border {
+	border-top: 1px solid #C0BABA;
+	border-left: 1px solid #C0BABA;
+	border-right: 1px solid #F1F1F1;
+	border-bottom: 1px solid #F1F1F1;
+	background-color: #FFFFFF;
+}
+.input_text { width: 100%; }
+.datepickerTimeField { width: 137px; }
+HR{
+	height: 1px; 
+	border: 0px; 
+	border-top: 1px solid #CCCCCC;
+}
+UL {
+	padding-left: 15px;
+}
+OPTGROUP {
+	font-style: normal;
+	color: #000000;
+	font-weight: bold;
+}
+OPTGROUP OPTION {
+	padding-left: 15px;
+}
+A, .A { color: #007CAA; text-decoration:none }
+A:hover { color: #003448; }
+B { font-weight: bold; }
+IMG, IMG A { border: 0px; }
+I { font-style: italic; }
+/* */
+.right { text-align: right; }
+.left { text-align: left; }
+.center { text-align: center; }
+.top { vertical-align: top; }
+.bottom { vertical-align: bottom; }
+.text_top { vertical-align: text-top; }
+.bold { font-weight: bold; }
+.pre { white-space: nowrap; }
+#cursor, .cursor, A { cursor: pointer; }
+
+.NameTable TD, .HeadTable TD { height: 28px; }
+.HeadTable P { padding: 7px 5px 7px 5px; }
+
+.NameTable { 
+	background-image: url(../images/elements/tabs1.png); 
+	background-position: 0px -11px;
+}
+
+.NameTable TD.Image { padding: 0px 10px 0px 10px; }
+.NameTable TD.Name {
+	font-weight: bold;
+	text-shadow: 2px 2px 3px #FFFFFF;
+}
+.NameTable TD.Help { padding: 0px 10px 0px 10px; }
+.NameTable TD.Image IMG { vertical-align: middle; }
+
+.DivHeadTable { padding: 28px 0px 28px 0px; }
+.HeadTable TD, .HeadTable P, .HeadTable A { font-weight: bold; }
+.HeadTable TD { 
+	background-image: url(../images/elements/g1.png); 
+	background-position: 0px -9px; 
+}
+.HeadTable A { 
+	font-weight: bold; 
+	display: block; 
+	color: #000000; 
+	padding: 7px 5px 7px 5px; 
+	text-decoration: none; 
+}
+html*.HeadTable A  { padding-right: 0px !important; }/* IE */
+
+.HeadTable A:hover, .HeadTable A:hover.OrderA, .HeadTable A:hover.OrderD { 
+	background-image: url(../images/elements/g2.png); 
+	background-position: 0px -10px; 
+}
+HeadTable A:visited { color: #0099FF; text-decoration: none; }/* border-bottom: 1px dotted #0099FF; */
+.HeadTable A:active, .HeadTable A:active.OrderA, .HeadTable A:active.OrderD {
+	background-image: url(../images/elements/g3.png); 
+	background-position: 0px -10px; 
+}
+.HeadTable A.OrderA, .HeadTable A.OrderD {
+	background-image: url(../images/elements/g4.png); 
+	background-position: 0px -10px; 
+}
+A.OrderA SPAN, A.OrderD SPAN {
+	padding-right: 15px;
+}
+A.OrderA, A.OrderD {
+	white-space:nowrap;
+}
+A.OrderA SPAN {
+	background: url(../images/elements/grid.png) no-repeat; 
+	background-position: -20px -3px;
+}
+A.OrderD SPAN {
+	background: url(../images/elements/grid.png) no-repeat; 
+	background-position: -40px -3px;
+}
+/* .OrderD A{
+	background-image: url(../images/elements/tabs1.png); 
+	background-position: 0px -10px;
+} */
+.DivTableEdite { padding: 0px 0px 30px 0px; overflow: hidden; }
+.HeadTable P { padding-left: 7px }
+.TableEdite TD { height: 28px; border-bottom: 1px solid #F0F0F0; }
+.TableEdite TD P { padding: 1px 5px 1px 4px; }
+.TableEdite A { color: #44C0FA; }
+.TableHelp { left: 0%; bottom: 0%; border-top: 1px solid #CCCCCC; }
+.TableHelp TD { font-weight: bold; text-align: center; }
+.TableHelp SPAN { color: #FF0000; }
+.ClassOnMouseOver {
+	background-image: url(../images/elements/g4.png); 
+	background-position: 0px -10px;
+}
+.ClassOnClick {
+	background-image: url(../images/elements/g2.png); 
+	background-position: 0px -10px;
+}
+.LightBlue { background-color: #FFFFFF; /* eaf2f8 */ }
+.LightGrey { background-color: #FFFFFF; /* FAFAFA - f3f3f3 */ }
+
+SPAN.StyleButton {
+	background: url(../images/elements/button.png) repeat-x;
+	background-position: left -151px;
+	display: block;
+	width: 150px;
+	height: 25px;
+}
+
+SPAN.StyleButton INPUT {
+	background-color: transparent;
+	border: 0px;
+	background: url(../images/elements/button.png) no-repeat;
+	background-position: right -100px;
+	height: 25px;
+}
+IMG.Help { vertical-align: middle; }
+
+.UploadFile INPUT { vertical-align: top; }
+.UploadFile DIV.fileSelect { margin-bottom: -4px; margin-top: 4px; }
+
+.Hidden {
+	position: absolute;
+	top: -77777px;
+	left: -77777px;
+}
+.HeadDir { top: 28px; }
+.HeadPluse { top: 56px; }
+.inline-block {
+	display: -moz-inline-stack;
+	display: inline-block;
+	_overflow: hidden;
+	zoom: 1;
+	*display: inline;
+}
+/* Видоизменение блочных ссылок под воздействием курсора в заголовках таблиц */
+.yaproSortTR, .yaproBottom TR { background: url(../images/elements/g1.png) 0px -9px; color: #000000; }
+.yaproSortTR A, .yaproSortTR DIV { color: #007CAA; font-weight: bold; }
+.yaproSortTR A:hover { color: #003348; }
+.yaproSortTR A:active { color: #FF0000; }
+.yaproSortTR .sortAsc, .yaproSortTR .sortDesc { }
+
+.yaproSortTR .sortAsc DIV { background: url(/images/elements/down.gif) top no-repeat; }
+.yaproSortTR .sortDesc DIV { background: url(/images/elements/up.gif) top no-repeat; }
+.yaproSortTR .sortAsc A:hover DIV { background: url(/images/elements/up.gif) top no-repeat; }
+.yaproSortTR A:hover DIV, .yaproSortTR .sortDesc A:hover DIV { background: url(/images/elements/down.gif) top no-repeat; }
+.overflowTable TD { padding:0px 5px; height:25px }
+.overflowTable TR { background-color:#FFF }
+
+.treeview A { color:#003448 }
+
+.ajaxLoaded { background: transparent url(/images/elements/apple-loading-16-16.gif) 0px 2px no-repeat !important; }
+
+.redBorder {
+	border: 1px solid #FF0000;
+}
+#amcharts {
+	margin-top: -45px;
+	margin-bottom: -20px;
+}
+.defaultSkin .mceListBox .mceText {
+	width: 37px !important;
+}

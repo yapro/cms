@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /cache/
+Disallow: /s/
+Disallow: /js/
+Disallow: /css/
+Disallow: /forum/
+Disallow: /outer/

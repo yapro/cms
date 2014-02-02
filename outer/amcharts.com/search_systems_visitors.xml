@@ -1,0 +1,42 @@
+<settings> 
+	<!-- Боковая сторона справа: -->
+	<grid>
+		<x>
+			<approx_count>9</approx_count>
+		</x>
+	</grid>
+	<graphs>
+		<graph gid="1">
+			<title>Yandex</title>
+			<selected>true</selected>
+		</graph>
+		<graph gid="2">
+			<title>Google</title>
+			<selected>true</selected>
+		</graph>
+		<graph gid="3">
+			<title>Rambler</title>
+			<selected>true</selected>
+		</graph>
+		<graph gid="4">
+			<title>Aport</title>
+			<selected>true</selected>
+		</graph>
+		<graph gid="5">
+			<title>Mail</title>
+			<selected>true</selected>
+		</graph>
+		<graph gid="6">
+			<title>Yahoo</title>
+			<selected>true</selected>
+		</graph>
+		<graph gid="7">
+			<title>Live</title>
+			<selected>true</selected>
+		</graph>
+		<graph gid="8">
+			<title>Bing</title>
+			<selected>true</selected>
+		</graph>
+	</graphs>
+</settings>

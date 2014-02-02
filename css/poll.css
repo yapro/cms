@@ -1,0 +1,65 @@
+.POLLNAME {/* название опроса/голосования */
+	font-size: 14px;
+	font-weight: bold;
+}
+.QUESTIONS {/* блок вопросов */
+	border-top: 1px solid #CCCCCC;
+	margin-top: 3px;
+	padding-top: 2px;
+}
+.QUESTION {/* вопрос */
+	padding-top: 5px;
+	font-weight: bold;
+}
+.VARIANTS {/* варианты вопросов */
+	padding-left: 15px;
+}
+.VARIANT {/* вариант */
+	padding-top: 10px;
+}
+.ANSWER {/* Сообщения посетителей */
+	padding-top: 3px;
+	padding-left: 15px;
+}
+.ANSWER DIV {/* Сообщения посетителей */
+	font-size: 11px;
+	border-bottom: 1px dotted #DEDEDE;
+}
+.ANSWERS_PERCENTS {/* Полоса 100% процентов */
+	background: #F0F0F0
+}
+.ANSWERS_PERCENTS DIV {/* Полоса процентов */
+	background: #00AFF0 none repeat scroll 0%;
+	height: 5px;
+}
+.QUESTIONS .ALL {/* Всего ответов */
+	font-style:oblique;
+	font-weight:bold;
+	padding-bottom:15px;
+	padding-left:15px;
+	padding-top:10px;
+}
+.FIELD .check {/* инпуты типа радио и чекбокс */
+	border: medium none;
+	vertical-align: middle
+}
+.POLLFORM .VARIANTS {/* варианты вопросов */
+	padding-left: 0px;
+}
+.POLLFORM .VARIANTS DIV {/* варианты вопросов */
+	padding: 2px 0px;
+}
+.POLLFORM .VARIANTS DIV.textarea {
+	margin:3px 12px 5px 0;
+}
+.POLLFORM .VARIANTS DIV TEXTAREA {
+	background-color:#FFFFFF;
+	border:1px solid #E2E2E2;
+	color:#000000;
+}
+.POLLFORM .VARIANT {/* вариант */
+	padding-top: 0px;
+}
+.RADIO .QUESTION {
+	padding:5px 0;
+}

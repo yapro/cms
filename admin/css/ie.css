@@ -1,0 +1,18 @@
+SELECT {
+	overflow: auto;
+	border-top: 1px solid #C0BABA;
+	border-left: 1px solid #C0BABA;
+	border-right: 1px solid #F1F1F1;
+	border-bottom: 1px solid #F1F1F1;
+	background-color: #FFFFFF;
+}
+OPTGROUP {
+	background-color: #E7F6FF;
+}
+OPTION {
+	background-color: #FFFFFF;
+	padding-left: 3px;
+}
+OPTION.Selected {
+	background-color: #CCFFCC;
+}

@@ -1,0 +1,1 @@
+В файлах XMPP.php, XMLStream.php, BOSH.php значение __FILE__ заменено на str_replace('\\','/',__FILE__) для поддержки Denver-a

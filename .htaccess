@@ -1,0 +1,26 @@
+# Если СMS выдает Forbidden - значит на хостинге не обозначен файл по-умолчанию, сделаем это:
+#DirectoryIndex index.php
+
+# Отключаем добавление генерируемых id автоматически добавляемых к URI ссылок
+#php_value session.use_trans_sid 0
+
+# Отключаем просмотр директорий
+Options -Indexes
+
+# Пользователь не прошел аутентификацию, доступ запрещен - Directory index forbidden
+ErrorDocument 403 /
+
+# Отключаем вывод ошибок пхп
+#php_value display_errors 0
+
+# Задаем дефолтную кодировку (для Денвера обязательна)
+#AddDefaultCharset UTF-8
+
+RewriteEngine On
+RewriteBase /
+
+# Обработка любого урл файлом index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !server-status
+RewriteRule . /index.php [L]

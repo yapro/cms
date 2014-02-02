@@ -1,0 +1,1 @@
+<?php $this->fields=array('page_id'=>1,'parent_id'=>1,'nesting'=>1,'position'=>1,'access'=>1,'access_inherited'=>1,'time_created'=>1,'time_modified'=>1,'name'=>1,'comment_id'=>1,'comment_user_id'=>1,'comment_time'=>1,'comments'=>1,'rating_sum'=>1,'rating_users'=>1,'tags'=>1,'img'=>1,'article'=>1,'menu'=>1,'title'=>1,'description'=>1,'keywords'=>1,'nivo_slider'=>1); ?>

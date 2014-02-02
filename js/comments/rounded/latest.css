@@ -1,0 +1,96 @@
+UL.comments { margin-left: 12px }
+LI.comment { list-style-image:none; list-style-position:outside; list-style-type:none }
+LI.comment .Message { width:100%; table-layout: fixed; display: table; *display: block }/* table-layout: fixed - в данном месте нужен дл€ любого браузера кроме IE7 */
+LI.comment .Message .Text { word-wrap: break-word; width: 100%; overflow: auto }
+html*LI.comment .Message .Text { line-height:30px }/* IE */
+UL.comments .Info { text-align:right; margin-bottom:15px; font-size:11px }
+UL.comments .Info A { font-size:11px }
+UL.comments .Info IMG {
+	vertical-align:middle;
+	background: transparent none repeat scroll 0% 0% !important;
+	border:0px !important;
+	display: inline !important;
+	margin:0px !important;
+	margin-right:6px !important;
+	padding:0px !important
+}
+/* »м€ формы */
+#commentFormName, #comments {
+	font-size:19px;
+	padding-bottom:5px;
+	text-align:center
+}
+#commentForm TEXTAREA { height: 100px }
+#HRcommentForm { visibility:hidden }
+
+/* ќформление комментари€ */
+DIV#commentsList { margin-right:11px; }
+UL.comments TABLE.Style { width:100%; table-layout: fixed }/* table-layout: fixed - в данном месте нужен дл€ IE7 */
+UL.comments TABLE.Style TD { background: #FFFFFF url(/images/elements/round/horizontal_corner.png) no-repeat; _background: transparent url(/images/elements/round/horizontal_corner.gif) no-repeat; }
+UL.comments TABLE.Style .l, UL.comments TABLE.Style .r { background: #FFFFFF url(/images/elements/round/vertical.png); _background: transparent url(/images/elements/round/vertical.gif); }
+UL.comments TABLE.Style .tl { width: 9px; }
+UL.comments TABLE.Style .t { background-repeat: repeat-x; background-position: 0px -40px; height: 9px; }
+UL.comments TABLE.Style .tr { background-position: -30px 0px; width: 9px; }
+UL.comments TABLE.Style .r { background-position: -30px 0px; }
+UL.comments TABLE.Style .r { background-position: -30px 0px; }
+UL.comments TABLE.Style .b { background-repeat: repeat-x; background-position: 0px -70px; height: 9px; }
+UL.comments TABLE.Style .bl { background-position: 0px -30px; }
+UL.comments TABLE.Style .br { background-position: -30px -30px; }
+UL.comments TABLE.Style DIV { background-image: none; background-color: #FFFFFF; margin-top:-2px }
+UL.comments TABLE.Style .b DIV { background: #FFFFFF url(/images/elements/comment_pointer.gif) no-repeat; width:17px; height:7px; float:right; margin-top:3px }
+
+#commentSmiles DIV { text-align: left; }
+#commentSmiles DIV IMG {
+	background: transparent none repeat scroll 0% 0%;
+	border:0px;
+	display: inline;
+	margin:0px;
+	padding:0px
+}
+
+/* ќформление комментари€
+.Comment { margin-right:15px }
+.Comment .Message { position:relative }
+.Comment .Message i { margin:0; position:absolute; background:transparent url(/images/elements/comment.png) no-repeat scroll; }
+
+.Comment .Message i.r {
+	background-position: 100% -15px;
+	height:100%;
+	right:-7px;
+	width:7px;
+}
+.Comment .Message i.rb {
+	background-position: 100% 100%;
+	bottom:-8px;
+	height:8px;
+	right:-7px;
+	width:7px;
+}
+.Comment .Message i.b {
+	background-position: 0 -7px;
+	background-repeat: repeat-x;
+	bottom:-8px;
+	height:8px;
+	right:0;
+	width:100%;
+}
+
+.Comment .Message i.lb {
+	background-position:  0 100%;
+	bottom:-8px;
+	height:8px;
+	left:-7px;
+	width:7px;
+}
+.Comment .Message i.l {
+	background-position:  0 -15px;
+	height:100%;
+	left:-7px;
+	width:7px;
+}
+.Comment .Message i.pointer {
+	bottom:-7px;
+	height:7px;
+	left:110px;
+	width:11px;
+} */

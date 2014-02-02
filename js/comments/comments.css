@@ -1,0 +1,92 @@
+UL.comments { margin-left: 12px }
+LI.comment { list-style-image:none; list-style-position:outside; list-style-type:none }
+LI.comment .Message { width:100%; table-layout: fixed; display: table; *display: block }/* table-layout: fixed - в данном месте нужен для любого браузера кроме IE7 */
+LI.comment .Message .Text { word-wrap: break-word; width: 100%; overflow: auto }
+html*LI.comment .Message .Text { line-height:30px }/* IE */
+LI.comment .Message * {
+	font-family: Arial,Helvetica,Tahoma,sans-serif;
+	font-size: 12px;
+}
+UL.comments .Info {
+	text-align: right;
+	margin-bottom: 25px;
+	font-size:11px;
+}
+UL.comments .Info A { font-size:11px }
+UL.comments .Info IMG {
+	vertical-align:middle;
+	background: transparent none repeat scroll 0% 0% !important;
+	border:0px !important;
+	display: inline !important;
+	margin: 0 0px 0 0 !important;
+	padding:0px !important
+}
+/* Отключаю т.к. подобное правило уже задано в основном файле CSS-стилей
+UL.comments UL {
+	margin: 0 0 0 15px;
+	padding: 0;
+}
+*/
+/* Имя формы */
+#commentFormName, #comments {
+	font-size:19px;
+	padding-bottom:5px;
+	text-align:center
+}
+#commentFormName {
+	padding: 0 0 12px 0;
+	text-align:left;
+}
+#commentForm TEXTAREA { height: 100px }
+#HRcommentForm { visibility:hidden }
+
+/* Оформление комментария */
+/*DIV#commentsList {
+	margin-right: 11px;
+}*/
+UL.comments TABLE.Style {
+	width:100%;
+	table-layout: fixed;/* table-layout: fixed - в данном месте нужен для IE7 */
+	border-bottom: 1px solid #CCC;
+}
+UL.comments TABLE.Style TD {
+	/* padding-bottom: 7px; */
+}
+/* UL.comments TABLE.Style DIV { margin-top:-2px } */
+
+#commentSmiles DIV { text-align: left; }
+#commentSmiles DIV IMG {
+	background: transparent none repeat scroll 0% 0%;
+	border:0px;
+	display: inline;
+	margin:0px;
+	padding:0px
+}
+LI.comment {
+	margin:10px 0;
+}
+/* Можно структурированно разукрасить вопросы-ответы:
+или так:
+.commentBG1 { border:1px solid #CCCCCC; }
+.commentBG2 { background-color: #EEEEEE; }
+*/
+
+#commentsList ul {
+	margin:10px 0 0 15px;
+	padding:10px 0 0 15px;
+}
+.commentBG1 { background-color: #EEEEEE; }
+.commentBG2 { background-color: #FFFFFF; }
+
+/* карма */
+/*.karma_up, .karma_down {
+	display:inline-block;
+	height:10px;
+	width:10px;
+	padding: 0 5px;
+}*/
+.karma_down { background: url(/js/comments/karma_down.gif) 5px 3px no-repeat; }
+.karma_up { background: url(/js/comments/karma_up.gif) 5px 3px no-repeat; }
+.karma { font-size:11px; }
+.karma_minus { color:#FF0000; }
+.karma_pluse { color:#008000; }

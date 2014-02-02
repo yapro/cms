@@ -1,0 +1,400 @@
+/* исключены:
+strong - из-за того, что теряется наследуемость, например <a href="#">link <strong>error bold</strong></a>
+ol, ul, li, - чтобы не менять стандартные автоматические браузерные пропорции отступов */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, dl, dt, dd, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+td {/* vertical-align: baseline; исключен для TD т.к. в фф едут обычные таблицы из 2 ячеек */
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	/*vertical-align: middle; - с 1 взгляда правильное, но на самом деле плохое правило т.к. отменяет valign="top" или valign="bottom" */
+}
+/* отменяю т.к. браузеры изначально выравнивают текст по центру высоты TD {
+	vertical-align: top;
+}*/
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+body {
+	color: black;
+	background: white;
+}
+
+/* отменяет отключение стандартных стилей
+ol, ul {
+	list-style: none;
+}*/
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+
+blockquote, q {
+	quotes: "" "";
+}
+A {/*:link - ещё не посещал*/
+	text-decoration: none;
+}
+A:hover {/*указатель мыши находится на ссылке*/
+	
+}
+A:active {/*в момент клика на ссылку*/
+	
+}
+A:visited {/*уже посещал эту ссылку*/
+	
+}
+A:hover:visited {/*указатель мыши находится на ссылке И уже посещал эту ссылку*/
+	
+}
+P {
+	padding: .5em 0;
+}
+IMG {
+	border: none;
+	vertical-align: middle;
+}
+P IMG {
+	margin: 0;
+}
+A IMG {
+	border: 0px;
+}
+DT {
+	font-weight: bold;
+	margin-bottom: .1em;
+}
+DL {
+	margin-top: .2em;
+	margin-bottom: .5em;
+}
+DD {
+	line-height: 1.5em;
+	margin-left: 2em;
+	margin-bottom: .1em;
+}
+FIELDSET {
+	border: 1px solid #CCCCCC;
+	padding: 0 1em .3em 1em;
+}
+LEGEND {
+	padding: 0 0.5em;
+}
+FORM {
+	border: none;
+	margin: 0;
+}
+TEXTAREA {
+	width: 100%;
+	overflow: auto;
+}
+.textarea {
+	overflow: hidden;/* for IE < 8*/
+}
+.textarea DIV {
+	padding: 0.5em;
+	border: 1px solid #CCC;
+}
+.textarea TEXTAREA {
+	padding: 0;
+	border: 0 none;
+}
+.input {
+	overflow: hidden;/* for IE < 8*/
+}
+.input DIV {
+	border: 1px solid #CCCCCC;
+	padding: 0.1em 0.3em;
+}
+.input DIV INPUT {
+	padding: 0;
+	border: 0 none;
+	width:100%;
+}
+Q {
+	font-family: Times, "Times New Roman", serif;
+	font-style: italic;
+}
+SELECT, BODY {
+	overflow: auto;
+	/* fix ie6,7 */
+	//overflow: visible;
+}
+EM, I {
+	font-style: italic;
+}
+OPTGROUP {
+	font-style: normal;
+	padding: 0 0.2em;
+}
+OPTGROUP OPTION {
+	padding-left: 1.5em;
+	/*background-color: #FFFFFF;*/
+}
+/*OPTION {
+	background-color: #FFFFFF;
+	padding-left: 3px;
+}*/
+ABBR, ACRONYM, .explain {
+	border-bottom: 1px dotted black;
+	color: black;
+	background: none;
+	cursor: help;
+}
+/* дополнительные удобные классы к элементам */
+.right {
+	text-align: right;
+}
+.left {
+	text-align: left;
+}
+.center {
+	text-align: center;
+}
+.bottom {
+	vertical-align: bottom;
+}
+.text_top {
+	vertical-align: text-top;
+}
+.bold {
+	font-weight: bold;
+}
+.pre {
+	white-space: nowrap;
+}
+#cursor, .cursor, A {
+	cursor: pointer;
+}
+OPTION.Selected {
+	background-color: #CCFFCC;
+}
+/*DIV.textarea {
+	margin:3px 12px 5px 0px
+}*/
+SELECT, .top {
+	vertical-align: top;
+}
+/* Оформление таблиц, например так: <table class="cellpadding5 styleTable"> */
+.styleTable, .styleTable5 {
+	border-width: 1px 0 0 1px;
+	border-color: #CCC;
+	border-style: solid;
+	border-spacing:0;
+	border-collapse:collapse;
+}
+.styleTable TH {
+	font-weight:bold;
+}
+.styleTable TD, .styleTable TH, .styleTable5 TD, .styleTable5 TH {
+	border-width: 0 1px 1px 0;
+	border-color: #CCC;
+	border-style: solid;
+}
+/* чтобы работало <table cellpadding=N */
+.cellpadding5 TD, .cellpadding5 TH, .styleTable5 TD, .styleTable5 TH {
+	padding: 0 0.7em;
+}
+.inline-block {
+	display: -moz-inline-stack !important;
+	display: inline-block !important;
+	_overflow: hidden !important;
+	zoom: 1 !important;
+	*display: inline !important;
+}
+.border {
+	width: 100%;
+	border-top: 1px solid #C0BABA;
+	border-left: 1px solid #C0BABA;
+	border-right: 1px solid #F1F1F1;
+	border-bottom: 1px solid #F1F1F1;
+	background-color: #FFFFFF;
+}
+/******************************************************************************************************/
+H1 {
+	font-size: 200%;
+}
+H2 {
+	font-size: 175%;
+}
+H3 {
+	font-size: 150%;
+}
+H4 {
+	font-size: 130%;
+}
+HR {
+	height: 1px; 
+	border: 0px; 
+	border-top: 1px solid #DDD;
+}
+TEXTAREA, INPUT {
+	font-family: verdana, helvetica;
+	font-size: 100%;
+}
+/*INPUT {
+	vertical-align: middle;
+}*/
+/* тег для выделения любого текста грязно-синим цветом текста в элементах LI */
+TT, DT {
+	color: #456E8C;
+	display: inline;
+}
+/* тег для выделения кодовых слов или кодового текста грязно-синим цветом с светло-желтым фоном */
+SAMP {
+	color: #000000;
+	background-color: #E1EFF7;
+	font-family: Tahoma, arial, sans-serif, verdana;
+	font-size: 11px;
+}
+IFRAME {
+	border: 0px solid #CCCCCC;
+}
+/* тег для выделения любого текста в виде блока с нежно розово-бежевым фоном и нежно оранжевой рамкой */
+BLOCKQUOTE {
+	background-color: #FBFBFC;
+	padding-left: 15px;
+}
+PRE {
+	overflow: auto;
+	*width: 650px;/* fix под IE 6/7 */
+	padding: 1em;
+	border: 1px dashed #2f6fab;
+	color: black;
+	background-color: #f9f9f9;
+	line-height: 1.1em;
+}
+PRE, CODE, BLOCKQUOTE {
+	display:block;
+	width: 650px;
+	border:1px dotted #CCCCCC;
+	overflow:auto;
+	padding:10px;
+	background: none repeat scroll 0 0 #FFFFF;
+	border-left: 5px solid #CCCCCC;
+	font: 1em/1.5 "Courier News",monospace;
+}
+PRE CODE {
+	display:block;
+	width: 650px;
+	padding:0;
+	border:0;
+	overflow: auto;
+}
+BLOCKQUOTE CODE {
+	padding:0;
+	border:0;
+	overflow: auto;
+}
+/* строковые "кавычки" */
+CITE {
+	
+}
+/* Clearfix */
+* html .clearfix {
+	height: 1%; /* IE5-6 */
+}
+
+.clearfix {
+	display: inline-block; /* IE7xhtml*/
+}
+
+html[xmlns] .clearfix {
+	display: block; /* O */
+}
+
+.clearfix:after {
+	clear: both;
+	content: "."; /* FF, O, etc. */
+	display: block;
+	height: 0;
+	line-height: 0;
+	visibility: hidden;
+}
+
+BODY {
+	font-size: 13px;
+	letter-spacing: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #FFFFFF;
+}
+UL LI, OL LI {
+	padding: 0.1em 0;
+}
+UL, OL {
+	margin-top: 0.1em;
+    padding-top: 0.1em;
+}
+
+
+
+/* Радио и Чекбокс элементы */
+.checkbox, .radio, .checkboxs INPUT, .radios INPUT {
+	/*border: medium none;*/
+	vertical-align: middle;
+	margin: 0 0 0.1em;
+}
+/* FF2, FF3 только */
+@-moz-document url-prefix(){
+	.checkbox, .radio, .checkboxs INPUT, .radios INPUT {
+		margin: 0 0 0.1em;
+	}
+}
+/* Chrome And Safari */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	body:first-of-type .checkbox, body:first-of-type .radio, body:first-of-type .checkboxs INPUT, body:first-of-type .radios INPUT { margin: 0 0 0.3em; }
+}
+/* Opera */
+@media all and (-webkit-min-device-pixel-ratio:10000),
+not all and (-webkit-min-device-pixel-ratio:0) {
+	.checkbox, .radio, .checkboxs INPUT, .radios INPUT { margin: 0.1em 0 0.1em; }
+}
+
+
+
+/* кнопки BUTTON, submit, reset */
+.button {
+	overflow: visible;
+	padding-left: 0.3em;
+	padding-right: 0.3em;
+	/* fix ie6,7 */
+	//padding-left: 0.5em;
+	//padding-right: 0.5em;
+}
+/* Opera */
+@media all and (-webkit-min-device-pixel-ratio:10000),
+not all and (-webkit-min-device-pixel-ratio:0) {
+	.button { padding-left: 0.5em; padding-right: 0.5em; }
+}
+/* Chrome And Safari */
+@media screen and (-webkit-min-device-pixel-ratio:0){
+body:first-of-type .button { padding-left: 0.3em; padding-right: 0.3em; }
+}

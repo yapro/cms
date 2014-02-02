@@ -1,0 +1,29 @@
+<settings> 
+<!-- Боковая сторона справа: -->
+  <grid>       
+    <x>                  
+      <approx_count>9</approx_count> 
+    </x>
+  </grid>
+
+  <graphs>
+    <graph gid="1">  
+      <title>Посетителей</title>  
+      <color>#0D8ECF</color>  
+      <color_hover>#FF0F00</color_hover>
+      <selected>true</selected>   
+    </graph>
+    <graph gid="2">  
+      <title>Посещений</title>  
+      <color>#B0DE09</color>  
+      <color_hover>#FF0F00</color_hover>
+      <selected>true</selected>   
+    </graph>
+    <graph gid="3">  
+      <title>Страниц</title>         
+      <color>#17A0A0</color>  
+      <color_hover>#FF0F00</color_hover>
+      <selected>true</selected>
+    </graph>
+  </graphs>  
+</settings>

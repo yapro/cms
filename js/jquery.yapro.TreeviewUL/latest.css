@@ -1,0 +1,55 @@
+/*.treeview { overflow: hidden }*/
+.treeview, .treeview ul { 
+	padding: 0;
+	margin: 0;
+	list-style: none
+}
+
+.treeview ul {
+	background-color: white;
+	margin-top: 0px;
+}
+
+.treeview li {
+	margin: 0;
+	padding: 3px 0px 1px 16px;/* 16 пикселов - отступ под древовидный фон */
+	background: url(images/line-vertical.gif) 0 0 repeat-y;
+	margin-bottom: -1px;
+	white-space:nowrap
+}
+
+.treeview li.last { background: url(images/lines.gif) no-repeat 0px -28px; }
+.treeview li.lastLI { background:transparent none repeat scroll 0% 0%; }
+.treeview li.noKids { background: url(images/lines.gif) no-repeat 0px 0px }
+
+.treeview li div {
+	*display: inline;
+	float:left;
+	height: 16px;
+	width: 16px;
+}
+/*.treeview li a { display:block; margin-top: 1px; margin-bottom:-1px }*/
+.treeview li div.explorer {
+	background: url(images/explorer.gif) 0px -109px no-repeat;
+	margin-left: -16px;
+	margin-top:-3px;
+	cursor: pointer;
+}
+.treeview.Mark li div.explorer { margin-top:-5px; }
+.treeview li.pluse div.explorer { background-position: -32px -65px; }
+
+.treeview li.pluse UL { display: none; }/* когда раздел скрыт, не показывать дочерний UL */
+
+.treeview li div.mark { background: url(images/mark.gif) no-repeat 0px 0px }
+.treeview li.minus div.mark { background-position: 0px -16px; margin-right: 2px }
+.treeview li.pluse div.mark { background-position: 0px 0px; margin-right: 2px }
+.treeview li.file div.mark { background-position: 0px -32px }
+.prevElements, .nextElements, .ajaxElements { background: transparent url(images/green_pointers.png) no-repeat }
+.prevElements { background-position: 0 -16px; }/* не используется */
+.ajaxElements { background: transparent url(/images/elements/apple-loading-16-16.gif) no-repeat; }
+
+/* Opera fix */
+@media all and (-webkit-min-device-pixel-ratio:10000),
+not all and (-webkit-min-device-pixel-ratio:0) {
+  .treeview li, .treeview li.noKids { width:1500px }
+}

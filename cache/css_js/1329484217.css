@@ -1,0 +1,1714 @@
+
+/* /css/typography.css */
+/* исключены:
+strong - из-за того, что теряется наследуемость, например <a href="#">link <strong>error bold</strong></a>
+ol, ul, li, - чтобы не менять стандартные автоматические браузерные пропорции отступов */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, dl, dt, dd, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+td {/* vertical-align: baseline; исключен для TD т.к. в фф едут обычные таблицы из 2 ячеек */
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	/*vertical-align: middle; - с 1 взгляда правильное, но на самом деле плохое правило т.к. отменяет valign="top" или valign="bottom" */
+}
+/* отменяю т.к. браузеры изначально выравнивают текст по центру высоты TD {
+	vertical-align: top;
+}*/
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+body {
+	line-height: 1;
+	color: black;
+	background: white;
+}
+
+/* отменяет отключение стандартных стилей
+ol, ul {
+	list-style: none;
+}*/
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+
+blockquote, q {
+	quotes: "" "";
+}
+A {/*:link - ещё не посещал*/
+	text-decoration: none;
+}
+A:hover {/*указатель мыши находится на ссылке*/
+	
+}
+A:active {/*в момент клика на ссылку*/
+	
+}
+A:visited {/*уже посещал эту ссылку*/
+	
+}
+A:hover:visited {/*указатель мыши находится на ссылке И уже посещал эту ссылку*/
+	
+}
+P {
+	padding: .5em 0;
+	line-height: 1.2em;
+}
+IMG {
+	border: none;
+	vertical-align: middle;
+}
+P IMG {
+	margin: 0;
+}
+A IMG {
+	border: 0px;
+}
+DT {
+	font-weight: bold;
+	margin-bottom: .1em;
+}
+DL {
+	margin-top: .2em;
+	margin-bottom: .5em;
+}
+DD {
+	line-height: 1.5em;
+	margin-left: 2em;
+	margin-bottom: .1em;
+}
+FIELDSET {
+	border: 1px solid #CCCCCC;
+	padding: 0 1em .3em 1em;
+}
+LEGEND {
+	padding: 0 0.5em;
+}
+FORM {
+	border: none;
+	margin: 0;
+}
+TEXTAREA {
+	width: 100%;
+	overflow: auto;
+}
+.textarea {
+	overflow: hidden;/* for IE < 8*/
+}
+.textarea DIV {
+	padding: 0.5em;
+	border: 1px solid #CCC;
+}
+.textarea TEXTAREA {
+	padding: 0;
+	border: 0 none;
+}
+.input {
+	overflow: hidden;/* for IE < 8*/
+}
+.input DIV {
+	border: 1px solid #CCCCCC;
+	padding: 0.1em 0.3em;
+}
+.input DIV INPUT {
+	padding: 0;
+	border: 0 none;
+	width:100%;
+}
+Q {
+	font-family: Times, "Times New Roman", serif;
+	font-style: italic;
+}
+SELECT, BODY {
+	overflow: auto;
+	/* fix ie6,7 */
+	//overflow: visible;
+}
+EM, I {
+	font-style: italic;
+}
+OPTGROUP {
+	font-style: normal;
+	padding: 0 0.2em;
+}
+OPTGROUP OPTION {
+	padding-left: 1.5em;
+	/*background-color: #FFFFFF;*/
+}
+/*OPTION {
+	background-color: #FFFFFF;
+	padding-left: 3px;
+}*/
+ABBR, ACRONYM, .explain {
+	border-bottom: 1px dotted black;
+	color: black;
+	background: none;
+	cursor: help;
+}
+/* дополнительные удобные классы к элементам */
+.right {
+	text-align: right;
+}
+.left {
+	text-align: left;
+}
+.center {
+	text-align: center;
+}
+.bottom {
+	vertical-align: bottom;
+}
+.text_top {
+	vertical-align: text-top;
+}
+.bold {
+	font-weight: bold;
+}
+.pre {
+	white-space: nowrap;
+}
+#cursor, .cursor, A {
+	cursor: pointer;
+}
+OPTION.Selected {
+	background-color: #CCFFCC;
+}
+/*DIV.textarea {
+	margin:3px 12px 5px 0px
+}*/
+SELECT, .top {
+	vertical-align: top;
+}
+/* Оформление таблиц, например так: <table class="cellpadding5 styleTable"> */
+.styleTable, .styleTable5 {
+	border-width: 1px 0 0 1px;
+	border-color: #CCC;
+	border-style: solid;
+	border-spacing:0;
+	border-collapse:collapse;
+}
+.styleTable TH {
+	font-weight:bold;
+}
+.styleTable TD, .styleTable TH, .styleTable5 TD, .styleTable5 TH {
+	border-width: 0 1px 1px 0;
+	border-color: #CCC;
+	border-style: solid;
+}
+/* чтобы работало <table cellpadding=N */
+.cellpadding5 TD, .cellpadding5 TH, .styleTable5 TD, .styleTable5 TH {
+	padding: 0 0.7em;
+}
+.inline-block {
+	display: -moz-inline-stack !important;
+	display: inline-block !important;
+	_overflow: hidden !important;
+	zoom: 1 !important;
+	*display: inline !important;
+}
+.border {
+	width: 100%;
+	border-top: 1px solid #C0BABA;
+	border-left: 1px solid #C0BABA;
+	border-right: 1px solid #F1F1F1;
+	border-bottom: 1px solid #F1F1F1;
+	background-color: #FFFFFF;
+}
+/******************************************************************************************************/
+H1 {
+	font-size: 200%;
+	line-height: 1em;
+}
+H2 {
+	font-size: 175%;
+	line-height: 1.1em;
+}
+H3 {
+	font-size: 150%;
+	line-height: 1.2em;
+}
+H4 {
+	font-size: 130%;
+	line-height: 1.3em;
+}
+HR {
+	height: 1px; 
+	border: 0px; 
+	border-top: 1px solid #DDD;
+}
+TEXTAREA, INPUT {
+	font-family: verdana, helvetica;
+	font-size: 100%;
+}
+/*INPUT {
+	vertical-align: middle;
+}*/
+/* тег для выделения любого текста грязно-синим цветом текста в элементах LI */
+TT, DT {
+	color: #456E8C;
+	display: inline;
+}
+/* тег для выделения кодовых слов или кодового текста грязно-синим цветом с светло-желтым фоном */
+SAMP {
+	color: #000000;
+	background-color: #E1EFF7;
+	font-family: Tahoma, arial, sans-serif, verdana;
+	font-size: 11px;
+}
+IFRAME {
+	border: 0px solid #CCCCCC;
+}
+/* тег для выделения любого текста в виде блока с нежно розово-бежевым фоном и нежно оранжевой рамкой */
+BLOCKQUOTE {
+	background-color: #FBFBFC;
+	padding-left: 15px;
+}
+PRE {
+	overflow: auto;
+	*width: 650px;/* fix под IE 6/7 */
+	padding: 1em;
+	border: 1px dashed #2f6fab;
+	color: black;
+	background-color: #f9f9f9;
+	line-height: 1.1em;
+}
+PRE, CODE, BLOCKQUOTE {
+	display:block;
+	width: 650px;
+	border:1px dotted #CCCCCC;
+	overflow:auto;
+	padding:10px;
+	background: none repeat scroll 0 0 #FFFFF;
+	border-left: 5px solid #CCCCCC;
+	font: 1em/1.5 "Courier News",monospace;
+}
+PRE CODE {
+	display:block;
+	width: 650px;
+	padding:0;
+	border:0;
+	overflow: auto;
+}
+BLOCKQUOTE CODE {
+	padding:0;
+	border:0;
+	overflow: auto;
+}
+/* строковые "кавычки" */
+CITE {
+	
+}
+/* Clearfix */
+* html .clearfix {
+	height: 1%; /* IE5-6 */
+}
+
+.clearfix {
+	display: inline-block; /* IE7xhtml*/
+}
+
+html[xmlns] .clearfix {
+	display: block; /* O */
+}
+
+.clearfix:after {
+	clear: both;
+	content: "."; /* FF, O, etc. */
+	display: block;
+	height: 0;
+	line-height: 0;
+	visibility: hidden;
+}
+
+BODY {
+	font-size: 13px;
+	letter-spacing: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #FFFFFF;
+}
+UL LI, OL LI {
+	padding: 0.1em 0;
+}
+UL, OL {
+	margin-top: 0.1em;
+    padding-top: 0.1em;
+}
+
+
+
+/* Радио и Чекбокс элементы */
+.checkbox, .radio, .checkboxs INPUT, .radios INPUT {
+	/*border: medium none;*/
+	vertical-align: middle;
+	margin: 0 0 0.1em;
+}
+/* FF2, FF3 только */
+@-moz-document url-prefix(){
+	.checkbox, .radio, .checkboxs INPUT, .radios INPUT {
+		margin: 0 0 0.1em;
+	}
+}
+/* Chrome And Safari */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	body:first-of-type .checkbox, body:first-of-type .radio, body:first-of-type .checkboxs INPUT, body:first-of-type .radios INPUT { margin: 0 0 0.3em; }
+}
+/* Opera */
+@media all and (-webkit-min-device-pixel-ratio:10000),
+not all and (-webkit-min-device-pixel-ratio:0) {
+	.checkbox, .radio, .checkboxs INPUT, .radios INPUT { margin: 0.1em 0 0.1em; }
+}
+
+
+
+/* кнопки BUTTON, submit, reset */
+.button {
+	overflow: visible;
+	padding-left: 0.3em;
+	padding-right: 0.3em;
+	/* fix ie6,7 */
+	//padding-left: 0.5em;
+	//padding-right: 0.5em;
+}
+/* Opera */
+@media all and (-webkit-min-device-pixel-ratio:10000),
+not all and (-webkit-min-device-pixel-ratio:0) {
+	.button { padding-left: 0.5em; padding-right: 0.5em; }
+}
+/* Chrome And Safari */
+@media screen and (-webkit-min-device-pixel-ratio:0){
+body:first-of-type .button { padding-left: 0.3em; padding-right: 0.3em; }
+}
+/* /css/style.css */
+/* column container */
+.colmask {
+	position:relative;	/* This fixes the IE7 overflow hidden bug */
+	clear:both;
+	float:left;
+	width:100%;			/* width of whole page */
+	overflow:hidden;		/* This chops off any overhanging divs */
+}
+/* common column settings */
+.colright,
+.colmid,
+.colleft {
+	float:left;
+	width:100%;
+	position:relative;
+}
+.col1,
+.col2,
+.col3 {
+	float:left;
+	position:relative;
+	padding:0 0 1em 0;
+	overflow:hidden;
+}
+/* 2 Column (left menu) settings */
+.leftmenu {
+	/*background:#fff; 		right column background colour */
+}
+.leftmenu .colleft {
+	/* right column width */
+	right:78%;			/* внешняя ширина правой колонки | R_width_outer */
+	/* 	background:#CCC;left column background colour */
+}
+.leftmenu .col1 {
+	/* right column content width */
+	width:76%;			/* внутренняя ширина правой колонки | R_width_inner ( должна быть меньше чем R_width_outer ) */
+	/* 100% plus left column left padding */
+	left:102%;			/* паддинг слева для R_width_inner, рассчитывается как 100% + необходимый паддинг слева */
+	/*background-color:#FFCCCC;*/
+}
+.leftmenu .col2 {
+	/* left column content width (column width minus left and right padding) */
+	width:22%;			/* ширина левой колонки | L_width_inner */
+	/* (right column left and right padding) plus (left column left padding) */
+	left:2%;/* L_margin_rl это сумма левого и правого маржина для L_width_inner. Рассчитывается как L_margin_rl + (L_margin_rl/2) */
+	/* background-color:#FFFFCC;	left inner column background colour */
+}
+/* Footer styles */
+#footer {
+	clear:both;
+	float:left;
+	width:100%;
+}
+BODY {
+	font-size: 13px;
+	line-height: 1.3;
+	background-repeat: repeat-x;
+	background-position: left top;
+	color:#464646;/*89717C*/
+}
+A {/*:link - ещё не посещал*/
+	text-decoration: none;
+	color: #0088CC;
+	background: none;
+}
+A:hover {/*указатель мыши находится на ссылке*/
+	color: #2471A7
+}
+A:active {/*в момент клика на ссылку*/
+	color: #faa700;
+}
+A:visited {/*уже посещал эту ссылку*/
+	color: #7CBBE6;
+}
+A:hover:visited {/*указатель мыши находится на ссылке И уже посещал эту ссылку*/
+	color: #297EB9
+}
+
+
+
+/* Центрируем блок */
+.centerOuter {
+	text-align: center;/* для ИЕ в quirks mode и для ИЕ младше ИЕ6 */
+}
+.centerInner {
+    margin: 0 auto;/* для нормальных браузеров и для ИЕ в strict mode*/
+    text-align: left;
+}
+
+#body {
+    /*border: 1px dashed;*/
+    margin-top:97px;
+}
+/* скрываем нужные элементы */
+.Hidden, .hidden {
+	position: absolute;
+	top: -7777777px;
+	left: -7777777px;
+}
+
+/* верхнее меню */
+#topMenu {
+	position: absolute;
+	top: 0px;
+	left: 0%;
+	width: 100%;
+}
+#topMenu A {
+	border: none;
+}
+#topMenu A#lock {
+	padding-left:17px;
+	background:url(/images/lock.png) no-repeat;
+}
+#topMenu SPAN {
+	color:#CCC;
+	margin: 0 10px;
+}
+
+/* Ошибка в тексте */
+#SpellingStr, #SpellingStr SPAN {
+	line-height: 23px;
+	color: #5F5E62 !important;
+	font-size: 12px !important;
+	margin: 0 !important;
+}
+SPAN.keyButton {
+	background:none repeat scroll 0 0 #ECECEC;
+	border-color:#FFFFFF #BBB8AB #BBB8AB #FFFFFF;
+	border-style:solid;
+	border-width:1px;
+	padding:1px 4px;
+}
+/* Личный кабинет */
+#user_home_link {
+	background: url(/images/settings-icon.png) no-repeat;
+	padding: 0 0 0 21px;
+}
+#user_logout_link {
+	background: url(/images/user_auth_link.png) no-repeat;
+	padding: 0 0 0 21px;
+}
+/* мои закладки */
+#pages_bookmarks {
+	background: url(/js/bookmarks/bookmarks.png) no-repeat 0 -31px;
+	padding: 0 0 0 21px;
+}
+/* любимое видео */
+#pages_favourites {
+	background: url(/images/likes.png) no-repeat left bottom;
+	padding: 0 0 0 21px;
+}
+/* Wrapped by Lebnik */
+.wrap_outer { width:100%; table-layout: fixed; display: table; *display: block }
+/* table-layout: fixed - в данном месте нужен для любого браузера кроме IE7 */
+.wrap_outer .wrap_inner { white-space: pre-line; word-wrap: break-word; width: 100%; overflow: auto }
+html*.wrap_outer .wrap_inner { line-height:30px }/* IE */
+.wrap_outer PRE { padding: 0px; border: none; }
+.wrap_inner {
+	font-family: Arial,Helvetica,Tahoma,sans-serif;
+}
+
+#innerArticleActions {
+	font-size: 11px;
+	border-top: 1px dashed #CCCCCC;
+	border-bottom: 1px dashed #CCCCCC;
+	padding: 10px 0px;
+}
+/* Рейтинги */
+#innerArticleActions .rating_center {
+	vertical-align: top;
+}
+#innerArticleActions TD.nowrap {
+	white-space: nowrap;
+	padding-right: 11px !important;
+}
+#innerArticleActions .online {
+	margin-left:10px;
+}
+.TableRating {
+	background-color: #FFF;
+	padding: 0px 3px 0px;
+}
+.TableRating .estimate {
+	text-align: center;
+}
+.TableRating.Hidden {
+	box-shadow: 0 0 10px #CCC;
+}
+
+/* Листинг страниц */
+.Listing {
+	/*border: 1px solid #CCC;*/
+	padding:5px;
+	text-align:center;
+	line-height:25px;
+	/*margin-bottom: 15px
+	background-color: #FFF;
+	font-size: 1.4em;*/
+	border-top: 1px dashed #CCCCCC;
+}
+.Listing .inThePresent { margin-right:5px }
+.Listing SPAN { padding: 3px 5px }
+.Listing A {
+	text-decoration:none;
+	white-space: nowrap
+}
+.Listing A:hover {
+	color: #FF0000;
+	border-bottom: #FF0000 1px solid;
+}
+.Listing EM {
+	color: #000000;
+	background-color: #ECEDF3;/*FFFF00*/
+	border: #FFCCCC 1px dotted;
+	white-space: nowrap;
+	margin:0 -5px;
+	padding:0 5px;
+	font-style:normal;
+}
+.Listing .inThePast {
+	padding-left: 5px;
+}
+/* закругленные уголки */
+.round {
+	border: 1px solid #FFF;
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	-o-border-radius: 15px;
+	-khtml-border-radius: 15px;
+}
+.Site {
+	width: 976px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* настройки SHPath [ */
+#SHPath {
+	position: absolute;
+	z-index: 10;
+	top: 130px;
+	left: 3%;
+	font-style: italic;
+}
+#SHPath A {
+	font-size: 0.9em;
+	font-style: italic;
+}
+.SHPathSubMenu DIV P {
+	padding:0 5px;
+}
+.SHPathSubMenu DIV P A {
+	white-space: nowrap;
+	font-size: 0.9em;
+	font-style:italic;
+	line-height:25px;
+}
+/* настройки SHPath ] */
+
+
+
+/* Альтернативный Javascript-поиск от Google */
+.myGoogleSearchStyles .gsc-control {
+	width: 100%;
+}
+.myGoogleSearchStyles .gsc-tabsArea, 
+.myGoogleSearchStyles .gs-watermark, 
+.myGoogleSearchStyles .gsc-resultsHeader, 
+.myGoogleSearchStyles .gs-result a.gs-visibleUrl, 
+.myGoogleSearchStyles .gs-result .gs-visibleUrl {
+	display: none;
+}
+.gsc-results .gsc-cursor-box .gsc-cursor-page {
+	color:#0088CC;
+	cursor:pointer;
+	display:inline;
+	margin-right:8px;
+	text-decoration:none;
+}
+.myGoogleSearchStyles .gsc-result {
+	margin-bottom: 17px;
+}
+.myGoogleSearchStyles .gsc-cursor-current-page {
+	color:#FF0000 !important;
+}
+
+
+
+/* комментарии */
+#commentUserReg {
+	margin-bottom: 7px;
+}
+#textareaTable {
+	margin-bottom: 7px;
+}
+.ajax_comment_form {
+	border: 1px solid #CCC;
+	padding: 3px 5px;
+	/*margin-left: 240px;*/
+	color:#999999;
+	cursor: text;
+}
+
+
+
+/* для более удобного просмотра полноразмерных страниц */
+#fancybox-wrap {
+	padding: 0 !important;
+	margin-top: 33px;
+}
+
+/* тень для всплывающих блоков */
+.shadow {
+	border: 1px solid #CCC;
+	-moz-box-shadow:0px 0px 10px #CCC;
+	-webkit-box-shadow:0px 0px 10px #CCC;
+	box-shadow:0px 0px 10px #CCC;
+}
+
+
+
+
+#menu_left, #menu_left UL {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+#menu_left LI {
+	list-style-image: none;
+	padding: 0px;
+	margin:0;
+	line-height: normal;
+}
+#menu_left a {
+	display: block;
+	padding: 5px 10px;
+	text-decoration: none;
+}
+#menu_left a {
+    line-height: 41px;
+    padding: 0 0 0 30px;
+    text-decoration: none;
+    border-bottom: 1px dashed #CCC;
+}
+#menu_left LI {
+	padding: 0;
+}
+#menu_left LI LI {
+	padding-left: 20px;
+}
+#menu_left a:hover,
+#menu_left a.selected {
+	font-weight:bold;
+}
+#menu_left LI.root-item-latest A {
+	border-bottom: none;
+}
+
+
+
+
+#footer {
+	padding-top: 25px;
+}
+
+
+
+#commentForm {
+	font-size: 12px;
+}
+#commentForm .textarea, #commentForm .input DIV {
+	background-color: #FFF;
+}
+
+
+
+H3 {
+    padding-bottom: 9px;
+}
+
+
+
+#searchForm {
+	margin-top:15px;
+	margin-bottom:15px;
+}
+#searchFormResult {
+	margin-bottom:15px;
+}
+#searchForm TD {
+	vertical-align:top;
+}
+#searchForm .SearchLeft {
+	font-weight:bold;
+	padding: 0 0 15px;
+	text-align: right;
+}
+
+
+/* Поисковые стили */
+.SearchForm { }
+.Search { }
+.Search TABLE {
+	text-align: right;
+	height:19px;
+	width: 100%;
+}
+.Search TD {
+	border: 0px none !important;
+}
+TD.SearchSubmit, TD.SearchField, TD.SearchRight {
+	background: transparent url(/images/search.png) no-repeat !important;
+}
+TD.SearchSubmit { 
+	border: 0px none;
+	padding: 0px;
+	width: 19px;
+}
+TD.SearchSubmit INPUT { 
+	border: 0px none; 
+	padding: 0px; 
+	width: 19px;
+	background: transparent !important;
+	cursor: pointer;
+	font-size: 12px;/* должно быть равным 12 px для IE 7 */
+}
+TD.SearchField { 
+	border: 0px none;
+	padding: 0px;
+	background-repeat: repeat-x !important;
+	background-position: 0 -19px !important;
+}
+TD.SearchField INPUT { 
+	border: 0px none; 
+	padding: 0px; 
+	width: 100%;
+	background: transparent;
+	font-family: Arial,Helvetica,sans-serif; 
+	font-style:oblique;
+	text-align: left; 
+	outline:none;/* fix чтобы убрать выделение подсветкой в Safari */
+}
+TD.SearchRight {
+	border: 0px none;
+	padding: 0px;
+	background-position: 0 -38px !important;
+	width: 10px;
+}
+.Search INPUT {
+	padding: 1px 0px 0px 0px !important;
+	margin: 0px;
+}
+/* хак под Safari и Chrome: */
+@media screen and (-webkit-min-device-pixel-ratio:0){
+body:first-of-type .Search INPUT { padding-top: 2px !important; }
+}
+/* результат поиска */
+.SearchResult {
+	padding: 10px 0px 10px 0px;
+}
+
+
+
+.box-head {
+	padding-bottom:10px;
+}
+
+
+/* правила Анонсов */
+.KidsNotice {
+	margin: 0 0 15px;
+}
+.KidsNotice TD.Right {
+	padding: 0 15px;
+	vertical-align: top;
+}
+.KidsNotice DIV.name A {
+	font-size: 18px !important;
+	border: none !important;
+	font-family:Georgia,"Times New Roman",Times,serif;
+	text-shadow:0 1px 1px #CCCCCC;
+}
+.KidsNotice DIV.footer {
+	padding: 5px 0;
+	font-size: 11px;
+	color: #5F5E62;
+}
+.KidsNotice DIV.footer * {
+	font-size: 11px;
+	/*color: #5F5E62;*/
+}
+.KidsNotice DIV.footer .comments {
+	background: url(/js/comments/comment.gif) no-repeat 10px 2px;
+	padding-left: 27px;
+	padding-bottom:1px;
+}
+.KidsNotice DIV.footer .read {
+	background: url(/images/read.gif) no-repeat 10px 2px;
+	padding-left: 27px;
+	padding-bottom:1px;
+}
+.KidsNotice TD:first-child {
+	vertical-align: top;
+}
+.KidsNotice IMG:first-child {
+	border: 1px solid #EBEBEB;
+	padding: 2px;
+}
+.cut {
+	height:7px;
+	border-top: 1px dashed #CCC;
+	clear:both;
+	padding-bottom:10px;
+}
+/* /js/jgrowl/jgrowl.css */
+
+div.jGrowl {
+	z-index: 			9999;
+	color: 				#000;
+}
+
+/** Special IE6 Style Positioning **/
+div.ie6 {
+	position: 			absolute;
+}
+
+div.ie6.top-right {
+	right: 				auto;
+	bottom: 			auto;
+	left: 				expression( ( 0 - jGrowl.offsetWidth + ( document.documentElement.clientWidth ? document.documentElement.clientWidth : document.body.clientWidth ) + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+	top: 				expression( ( 0 + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+}
+
+div.ie6.top-left {
+	left: 				expression( ( 0 + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+	top: 				expression( ( 0 + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+}
+
+div.ie6.bottom-right {
+	left: 				expression( ( 0 - jGrowl.offsetWidth + ( document.documentElement.clientWidth ? document.documentElement.clientWidth : document.body.clientWidth ) + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+	top: 				expression( ( 0 - jGrowl.offsetHeight + ( document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight ) + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+}
+
+div.ie6.bottom-left {
+	left: 				expression( ( 0 + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+	top: 				expression( ( 0 - jGrowl.offsetHeight + ( document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight ) + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+}
+
+div.ie6.center {
+	left: 				expression( ( 0 + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+	top: 				expression( ( 0 + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+	width: 				100%;
+}
+
+/** Normal Style Positions **/
+div.jGrowl {
+	position:			absolute;
+}
+
+body > div.jGrowl {
+	position:			fixed;
+}
+
+div.jGrowl.top-left {
+	left: 				0px;
+	top: 				0px;
+}
+
+div.jGrowl.top-right {
+	right: 				0px;
+	top: 				0px;
+}
+
+div.jGrowl.bottom-left {
+	left: 				0px;
+	bottom:				0px;
+}
+
+div.jGrowl.bottom-right {
+	right: 				0px;
+	bottom: 			0px;
+}
+
+div.jGrowl.center {
+	top: 				0px;
+	width: 				50%;
+	left: 				25%;
+}
+
+/** Cross Browser Styling **/
+div.center div.jGrowl-notification, div.center div.jGrowl-closer {
+	margin-left: 		auto;
+	margin-right: 		auto;
+}
+
+div.jGrowl div.jGrowl-notification, div.jGrowl div.jGrowl-closer {
+	background-color: 		#FFFFCC;
+	/*opacity: 				.85;
+	-ms-filter: 			"progid:DXImageTransform.Microsoft.Alpha(Opacity=85)"; 
+	filter: 				progid:DXImageTransform.Microsoft.Alpha(Opacity=85); */
+	zoom: 					1;
+	width: 					235px;
+	padding: 				10px;
+	margin-top: 			5px;
+	margin-bottom: 			5px;
+	/*font-family: 			Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 				1em;*/
+	text-align: 			left;
+	display: 				none;
+	border: 1px solid #FFCC99;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	-khtml-border-radius: 5px;
+}
+/*
+div.jGrowl div.jGrowl-notification {
+	min-height: 			40px;
+}
+*/
+div.jGrowl div.jGrowl-notification,
+div.jGrowl div.jGrowl-closer {
+	margin: 				10px;
+}
+
+div.jGrowl div.jGrowl-notification div.jGrowl-header {
+	font-weight: 			bold;
+	font-size:				.85em;
+}
+
+div.jGrowl div.jGrowl-notification div.jGrowl-close {
+	z-index:				99;
+	float: 					right;
+	font-weight: 			bold;
+	font-size: 				1em;
+	cursor:					pointer;
+	margin-left: 5px;
+}
+
+div.jGrowl div.jGrowl-closer {
+	padding-top: 			4px;
+	padding-bottom: 		4px;
+	cursor: 				pointer;
+	font-size:				.9em;
+	font-weight: 			bold;
+	text-align: 			center;
+}
+
+/** Hide jGrowl when printing **/
+@media print {
+	div.jGrowl {
+		display: 			none;
+	}
+}
+div.jGrowl div.red {
+	background-color: #FFCCCC;
+}
+/* /js/jquery.yapro.alert/latest.css */
+#popup_container {
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	/* min-width: 300px; Dialog will be no smaller than this */
+	/* max-width: 600px; Dialog will wrap after this width */
+	background: #FFF;
+	border: solid 5px #999;
+	color: #000;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+#popup_title {
+	display:none;
+}
+
+#popup_content {
+	padding: 1em 1.75em;
+	margin: 0em;
+}
+
+#popup_content.alert {
+	
+}
+
+#popup_content.confirm {
+	
+}
+
+#popup_content.prompt {
+	
+}
+
+#popup_message {
+	padding-left: 0px;
+}
+
+#popup_panel {
+	text-align: center;
+	margin: 1em 0em 0em 1em;
+}
+
+#popup_prompt {
+	margin: 0.5em 0 0;
+}
+
+/* /js/fancybox/jquery.fancybox-1.3.4.css */
+/*
+ * FancyBox - jQuery Plugin
+ * Simple and fancy lightbox alternative
+ *
+ * Examples and documentation at: http://fancybox.net
+ * 
+ * Copyright (c) 2008 - 2010 Janis Skarnelis
+ * That said, it is hardly a one-person project. Many people have submitted bugs, code, and offered their advice freely. Their support is greatly appreciated.
+ * 
+ * Version: 1.3.4 (11/11/2010)
+ * Requires: jQuery v1.3+
+ *
+ * Dual licensed under the MIT and GPL licenses:
+ *   http://www.opensource.org/licenses/mit-license.php
+ *   http://www.gnu.org/licenses/gpl.html
+ */
+
+#fancybox-loading {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 40px;
+	height: 40px;
+	margin-top: -20px;
+	margin-left: -20px;
+	cursor: pointer;
+	overflow: hidden;
+	z-index: 1104;
+	display: none;
+}
+
+#fancybox-loading div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 40px;
+	height: 480px;
+	background-image: url('/js/fancybox/fancybox.png');
+}
+
+#fancybox-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1100;
+	display: none;
+}
+
+#fancybox-tmp {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	overflow: auto;
+	display: none;
+}
+
+#fancybox-wrap {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 20px;
+	z-index: 1101;
+	outline: none;
+	display: none;
+}
+
+#fancybox-outer {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+}
+
+#fancybox-content {
+	width: 0;
+	height: 0;
+	padding: 0;
+	outline: none;
+	position: relative;
+	overflow: hidden;
+	z-index: 1102;
+	border: 0px solid #fff;
+}
+
+#fancybox-hide-sel-frame {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	z-index: 1101;
+}
+
+#fancybox-close {
+	position: absolute;
+	top: -15px;
+	right: -15px;
+	width: 30px;
+	height: 30px;
+	background: transparent url('/js/fancybox/fancybox.png') -40px 0px;
+	cursor: pointer;
+	z-index: 1103;
+	display: none;
+}
+
+#fancybox-error {
+	color: #444;
+	font: normal 12px/20px Arial;
+	padding: 14px;
+	margin: 0;
+}
+
+#fancybox-img {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	border: none;
+	outline: none;
+	line-height: 0;
+	vertical-align: top;
+}
+
+#fancybox-frame {
+	width: 100%;
+	height: 100%;
+	border: none;
+	display: block;
+}
+
+#fancybox-left, #fancybox-right {
+	position: absolute;
+	bottom: 0px;
+	height: 100%;
+	width: 35%;
+	cursor: pointer;
+	outline: none;
+	background: transparent url('/js/fancybox/blank.gif');
+	z-index: 1102;
+	display: none;
+}
+
+#fancybox-left {
+	left: 0px;
+}
+
+#fancybox-right {
+	right: 0px;
+}
+
+#fancybox-left-ico, #fancybox-right-ico {
+	position: absolute;
+	top: 50%;
+	left: -9999px;
+	width: 30px;
+	height: 30px;
+	margin-top: -15px;
+	cursor: pointer;
+	z-index: 1102;
+	display: block;
+}
+
+#fancybox-left-ico {
+	background-image: url('/js/fancybox/fancybox.png');
+	background-position: -40px -30px;
+}
+
+#fancybox-right-ico {
+	background-image: url('/js/fancybox/fancybox.png');
+	background-position: -40px -60px;
+}
+
+#fancybox-left:hover, #fancybox-right:hover {
+	visibility: visible; /* IE6 */
+}
+
+#fancybox-left:hover span {
+	left: 20px;
+}
+
+#fancybox-right:hover span {
+	left: auto;
+	right: 20px;
+}
+
+.fancybox-bg {
+	position: absolute;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	width: 20px;
+	height: 20px;
+	z-index: 1001;
+}
+
+#fancybox-bg-n {
+	top: -20px;
+	left: 0;
+	width: 100%;
+	background-image: url('/js/fancybox/fancybox-x.png');
+}
+
+#fancybox-bg-ne {
+	top: -20px;
+	right: -20px;
+	background-image: url('/js/fancybox/fancybox.png');
+	background-position: -40px -162px;
+}
+
+#fancybox-bg-e {
+	top: 0;
+	right: -20px;
+	height: 100%;
+	background-image: url('/js/fancybox/fancybox-y.png');
+	background-position: -20px 0px;
+}
+
+#fancybox-bg-se {
+	bottom: -20px;
+	right: -20px;
+	background-image: url('/js/fancybox/fancybox.png');
+	background-position: -40px -182px; 
+}
+
+#fancybox-bg-s {
+	bottom: -20px;
+	left: 0;
+	width: 100%;
+	background-image: url('/js/fancybox/fancybox-x.png');
+	background-position: 0px -20px;
+}
+
+#fancybox-bg-sw {
+	bottom: -20px;
+	left: -20px;
+	background-image: url('/js/fancybox/fancybox.png');
+	background-position: -40px -142px;
+}
+
+#fancybox-bg-w {
+	top: 0;
+	left: -20px;
+	height: 100%;
+	background-image: url('/js/fancybox/fancybox-y.png');
+}
+
+#fancybox-bg-nw {
+	top: -20px;
+	left: -20px;
+	background-image: url('/js/fancybox/fancybox.png');
+	background-position: -40px -122px;
+}
+
+#fancybox-title {
+	font-family: Helvetica;
+	font-size: 12px;
+	z-index: 1102;
+}
+
+.fancybox-title-inside {
+	padding-bottom: 10px;
+	text-align: center;
+	color: #333;
+	background: #fff;
+	position: relative;
+}
+
+.fancybox-title-outside {
+	padding-top: 10px;
+	color: #fff;
+}
+
+.fancybox-title-over {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	color: #FFF;
+	text-align: left;
+}
+
+#fancybox-title-over {
+	padding: 10px;
+	background-image: url('/js/fancybox/fancy_title_over.png');
+	display: block;
+}
+
+.fancybox-title-float {
+	position: absolute;
+	left: 0;
+	bottom: -20px;
+	height: 32px;
+}
+
+#fancybox-title-float-wrap {
+	border: none;
+	border-collapse: collapse;
+	width: auto;
+}
+
+#fancybox-title-float-wrap td {
+	border: none;
+	white-space: nowrap;
+}
+
+#fancybox-title-float-left {
+	padding: 0 0 0 15px;
+	background: url('/js/fancybox/fancybox.png') -40px -90px no-repeat;
+}
+
+#fancybox-title-float-main {
+	color: #FFF;
+	line-height: 29px;
+	font-weight: bold;
+	padding: 0 0 3px 0;
+	background: url('/js/fancybox/fancybox-x.png') 0px -40px;
+}
+
+#fancybox-title-float-right {
+	padding: 0 0 0 15px;
+	background: url('/js/fancybox/fancybox.png') -55px -90px no-repeat;
+}
+
+/* IE6 */
+
+.fancybox-ie6 #fancybox-close { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/js/fancybox/fancy_close.png', sizingMethod='scale'); }
+
+.fancybox-ie6 #fancybox-left-ico { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/js/fancybox/fancy_nav_left.png', sizingMethod='scale'); }
+.fancybox-ie6 #fancybox-right-ico { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/js/fancybox/fancy_nav_right.png', sizingMethod='scale'); }
+
+.fancybox-ie6 #fancybox-title-over { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/js/fancybox/fancy_title_over.png', sizingMethod='scale'); zoom: 1; }
+.fancybox-ie6 #fancybox-title-float-left { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/js/fancybox/fancy_title_left.png', sizingMethod='scale'); }
+.fancybox-ie6 #fancybox-title-float-main { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/js/fancybox/fancy_title_main.png', sizingMethod='scale'); }
+.fancybox-ie6 #fancybox-title-float-right { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/js/fancybox/fancy_title_right.png', sizingMethod='scale'); }
+
+.fancybox-ie6 #fancybox-bg-w, .fancybox-ie6 #fancybox-bg-e, .fancybox-ie6 #fancybox-left, .fancybox-ie6 #fancybox-right, #fancybox-hide-sel-frame {
+	height: expression(this.parentNode.clientHeight + "px");
+}
+
+#fancybox-loading.fancybox-ie6 {
+	position: absolute; margin-top: 0;
+	top: expression( (-20 + (document.documentElement.clientHeight ? document.documentElement.clientHeight/2 : document.body.clientHeight/2 ) + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop )) + 'px');
+}
+
+#fancybox-loading.fancybox-ie6 div	{ background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/js/fancybox/fancy_loading.png', sizingMethod='scale'); }
+
+/* IE6, IE7, IE8 */
+
+.fancybox-ie .fancybox-bg { background: transparent !important; }
+
+.fancybox-ie #fancybox-bg-n { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/js/fancybox/fancy_shadow_n.png', sizingMethod='scale'); }
+.fancybox-ie #fancybox-bg-ne { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/js/fancybox/fancy_shadow_ne.png', sizingMethod='scale'); }
+.fancybox-ie #fancybox-bg-e { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/js/fancybox/fancy_shadow_e.png', sizingMethod='scale'); }
+.fancybox-ie #fancybox-bg-se { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/js/fancybox/fancy_shadow_se.png', sizingMethod='scale'); }
+.fancybox-ie #fancybox-bg-s { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/js/fancybox/fancy_shadow_s.png', sizingMethod='scale'); }
+.fancybox-ie #fancybox-bg-sw { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/js/fancybox/fancy_shadow_sw.png', sizingMethod='scale'); }
+.fancybox-ie #fancybox-bg-w { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/js/fancybox/fancy_shadow_w.png', sizingMethod='scale'); }
+.fancybox-ie #fancybox-bg-nw { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/js/fancybox/fancy_shadow_nw.png', sizingMethod='scale'); }
+
+/* /js/bookmarks/bookmarks.css */
+a.bookmarks {
+	height: 15px;
+	text-decoration: none;
+	font-size: 11px;
+	line-height: normal;
+	margin: 0px !important;
+	padding: 0 3px 0 21px !important;
+	background: url("/js/bookmarks/bookmarks.png") no-repeat 0 -1px;/* ��� � ����������� */
+}
+a.bookmarks:hover {
+	background-position: 0 -16px;
+}
+a.bookmarks:active, 
+a.bookmarks:hover, 
+a.bookmarks:visited, 
+a.bookmarks:hover:visited {
+	outline: medium none;
+}
+a.bookmarks.selected {
+	background-position: 0 -31px;
+}
+/*a.bookmarks.floated {
+	display:block;
+	float: left;
+	width: 16px;
+	text-indent: -9000px;
+	font-size: 11px;
+	margin: 0px !important;
+	padding:0px !important;
+}*/
+
+/* /js/rating/rating.css */
+.rating, .rating li a:hover, .rating li.current { background: url("/js/rating/love.gif") top left repeat-x }/* фон с звездочками */
+.rating {
+		font-size: 11px;
+		line-height: normal;
+		list-style: none !important;
+		list-style-type: none !important;
+		margin: 0px !important;
+		padding:0px !important;
+		width: 170px;
+		height: 16px;
+		position: relative
+}
+.rating li{
+	    list-style-image: none;
+	    text-indent: -90000px;/* Устанавливает величину отступа первой строки блока текста  */
+		padding:0px !important;
+		margin:0px !important;
+		float: left;
+}
+.rating li a{
+		display:block;
+		width:17px;
+		height: 16px;
+		text-decoration: none;
+		text-indent: -9000px;
+		z-index: 17;
+		position: absolute;
+		padding: 0px;
+}
+.rating li a:hover {
+		background-position: left bottom;
+		z-index: 2;
+		left: 0px;
+}
+.rating li a:active, 
+.rating li a:hover, 
+.rating li a:visited, 
+.rating li a:hover:visited {
+	outline: medium none;
+}
+.rating a { border: none; margin:0px; }
+.rating a.r1 {left: 0px}
+.rating a.r1:hover {width:17px}
+.rating a.r2 {left:17px}
+.rating a.r2:hover {width: 34px}
+.rating a.r3 {left: 34px}
+.rating a.r3:hover {width: 51px}
+.rating a.r4 {left: 51px}
+.rating a.r4:hover {width: 68px}
+.rating a.r5 {left: 68px}
+.rating a.r5:hover {width: 85px}
+.rating a.r6 {left: 85px}
+.rating a.r6:hover {width: 102px}
+.rating a.r7 {left: 102px}
+.rating a.r7:hover {width: 119px}
+.rating a.r8 {left: 119px}
+.rating a.r8:hover {width: 136px}
+.rating a.r9 {left: 136px}
+.rating a.r9:hover {width: 153px}
+.rating a.r10 {left: 153px}
+.rating a.r10:hover {width: 170px}
+.rating li.current {
+		background-position: left center;
+		position: absolute;
+		height: 16px;
+		display: block;
+		text-indent: -9000px;
+		z-index: 1;
+}
+/* Свои стили оформления */
+.TableRating { margin-left:0px }
+.TableRating TD { font-size:11px }
+.TableRating .rating_left { padding-right:3px; }
+.TableRating .rating_right { padding-left:5px; }
+
+/* /js/paginator/paginator.css */
+.paginator { font-size:1em }
+.paginator table {border-collapse:collapse; width:100% }
+.paginator table td {padding:0; white-space:nowrap;}
+.paginator span {display:block; padding:3px 0 5px 0; color:#fff;}
+.paginator span em, .paginator span a { padding:0 4px; margin:0px; font-size: 1.4em; }
+.paginator span em {font-style:normal;}
+.paginator .scrollbar {width:100%; height:10px; position:relative;}
+.paginator .scrollbar .line {width:100%; height:3px; background:#ccc; overflow:hidden;}
+.paginator .scrollbar .slider {position:absolute; width:3px; height:3px; top:0; left:0; font-size:1px; background:#363636;}
+.paginator .scrollbar .current_page_point {position:absolute; top:0; left:0; width:3px; height:3px; overflow:hidden; background:#ff6c24;}
+.paginator .scrollbar .slider_point {position:absolute; top:-5px; left:50%; margin-left:-10px; width:20px; height:20px; overflow:hidden; background:url(/js/paginator/slider.gif) no-repeat 50% 80%; cursor:pointer; cursor:hand;}
+.fullsize  .scrollbar .slider {display:none;}
+.paginator A, .paginator A:hover { border: none; }
+
+/* /js/tipsy/tipsy.css */
+.tipsy { padding: 5px; position: absolute; z-index: 100000; }
+.tipsy-inner { padding: 5px 8px 4px 8px; background-color: black; color: white; max-width: 200px; text-align: center; }
+.tipsy-inner { border-radius: 3px; -moz-border-radius:3px; -webkit-border-radius:3px; }
+.tipsy-arrow { position: absolute; background: url("/js/tipsy/tipsy.gif") no-repeat top left; width: 9px; height: 5px; }
+.tipsy-n .tipsy-arrow { top: 0; left: 50%; margin-left: -4px; }
+.tipsy-nw .tipsy-arrow { top: 0; left: 10px; }
+.tipsy-ne .tipsy-arrow { top: 0; right: 10px; }
+.tipsy-s .tipsy-arrow { bottom: 0; left: 50%; margin-left: -4px; background-position: bottom left; }
+.tipsy-sw .tipsy-arrow { bottom: 0; left: 10px; background-position: bottom left; }
+.tipsy-se .tipsy-arrow { bottom: 0; right: 10px; background-position: bottom left; }
+.tipsy-e .tipsy-arrow { top: 50%; margin-top: -4px; right: 0; width: 5px; height: 9px; background-position: top right; }
+.tipsy-w .tipsy-arrow { top: 50%; margin-top: -4px; left: 0; width: 5px; height: 9px; }
+
+/* /css/poll.css */
+.POLLNAME {/* название опроса/голосования */
+	font-size: 14px;
+	font-weight: bold;
+}
+.QUESTIONS {/* блок вопросов */
+	border-top: 1px solid #CCCCCC;
+	margin-top: 3px;
+	padding-top: 2px;
+}
+.QUESTION {/* вопрос */
+	padding-top: 5px;
+	font-weight: bold;
+}
+.VARIANTS {/* варианты вопросов */
+	padding-left: 15px;
+}
+.VARIANT {/* вариант */
+	padding-top: 10px;
+}
+.ANSWER {/* Сообщения посетителей */
+	padding-top: 3px;
+	padding-left: 15px;
+}
+.ANSWER DIV {/* Сообщения посетителей */
+	font-size: 11px;
+	border-bottom: 1px dotted #DEDEDE;
+}
+.ANSWERS_PERCENTS {/* Полоса 100% процентов */
+	background: #F0F0F0
+}
+.ANSWERS_PERCENTS DIV {/* Полоса процентов */
+	background: #00AFF0 none repeat scroll 0%;
+	height: 5px;
+}
+.QUESTIONS .ALL {/* Всего ответов */
+	font-style:oblique;
+	font-weight:bold;
+	padding-bottom:15px;
+	padding-left:15px;
+	padding-top:10px;
+}
+.FIELD .check {/* инпуты типа радио и чекбокс */
+	border: medium none;
+	vertical-align: middle
+}
+.POLLFORM .VARIANTS {/* варианты вопросов */
+	padding-left: 0px;
+}
+.POLLFORM .VARIANTS DIV {/* варианты вопросов */
+	padding: 2px 0px;
+}
+.POLLFORM .VARIANTS DIV.textarea {
+	margin:3px 12px 5px 0;
+}
+.POLLFORM .VARIANTS DIV TEXTAREA {
+	background-color:#FFFFFF;
+	border:1px solid #E2E2E2;
+	color:#000000;
+}
+.POLLFORM .VARIANT {/* вариант */
+	padding-top: 0px;
+}
+.RADIO .QUESTION {
+	padding:5px 0;
+}
+
+/* /css/important.css */
+.paginator span a {
+	color:#0088CC;
+}

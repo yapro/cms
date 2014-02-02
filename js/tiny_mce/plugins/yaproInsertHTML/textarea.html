@@ -1,0 +1,28 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Вставить произвольный HTML-код</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="Content-Language" content="ru">
+	<script type="text/javascript" src="../../tiny_mce_popup.js"></script>
+</head>
+<body style="display:none; overflow:hidden;">
+<textarea id="content" rows="15" cols="100" style="width: 100%; height: 355px; font-family: 'Courier New',Courier,mono; font-size: 12px;" dir="ltr" wrap="soft" class="mceFocus"></textarea>
+<div class="mceActionPanel">
+	<div style="float: left">
+		<input type="submit" name="insert" value="Вставить" id="insert" onclick="tinyMCEPopup.editor.execCommand('mceReplaceContent',false, document.getElementById('content').value);tinyMCEPopup.close();" />
+	</div>
+</div>
+<script type="text/javascript">
+function focus20110220(){
+	document.getElementById("content").focus();
+}
+if(window.addEventListener){
+	window.addEventListener('load', focus20110220, false);
+}else if(window.attachEvent){
+	window.attachEvent('onload', focus20110220);
+}else{
+	window.onload = focus20110220;
+}
+</script>
+</body> 
+</html>

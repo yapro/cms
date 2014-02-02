@@ -1,0 +1,12 @@
+.SHPathSubMenu { position: absolute; left: -10000px; top: -100000px; z-index: 100000; }
+.SHPathSubMenu TD { background: transparent url(/images/elements/round/horizontal_corner.png); _background: transparent url(/images/elements/round/horizontal_corner.gif); }
+.SHPathSubMenu .T0 { width: 9px; }
+.SHPathSubMenu .T1 { background-position: 0px -40px; height: 9px; }
+.SHPathSubMenu .T2 { background-position: -30px 0px; width: 9px; }
+.SHPathSubMenu .T3, .SHPathSubMenu .T4 { background: transparent url(/images/elements/round/vertical.png); _background: transparent url(/images/elements/round/vertical.gif); }
+.SHPathSubMenu .T4 { background-position: -30px 0px; }
+.SHPathSubMenu .T5 { background-position: 0px -30px; }
+.SHPathSubMenu .T6 { background-position: 0px -70px; height: 9px; }
+.SHPathSubMenu .T7 { background-position: -30px -30px; }
+.SHPathSubMenu DIV { background-image: none; overflow: auto; background-color: #FFFFFF; }
+.SHPathSubMenu DIV P { overflow: hidden; }/* нужно, когда названия статей очень длинные */

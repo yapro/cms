@@ -1,0 +1,363 @@
+/* Абсолютное позиционирование */
+#wrap { text-align:left; /* position: absolute; top: 7px; left: 50%; width: 980px !important; margin-left: -490px; padding: 0px; */ }
+
+/* Убираю отступы (слева и справа) у шапки сайта */
+#wrap .headerbar{ padding: 0px; }
+
+/* Стили поиска */
+#wrap .navlinks #search { display: inline !important; }
+#wrap .navlinks #search-box { float: left; margin-top: 0px !important; }
+#wrap .navlinks #search-box FIELDSET { font-size:100% !important; }
+#wrap .navlinks #search-box A { font-size:100% !important; color: #0088CC !important; }
+#wrap .navlinks #search-box INPUT.search { width: 700px !important; }
+
+/* Стили ссылок имен форума */
+#wrap a { color: #0088CC }/* цвет */
+#wrap P, #wrap DIV, #wrap LI, #wrap DT, #wrap DD, #wrap SPAN, #wrap SELECT, #wrap INPUT, #wrap H2, #wrap H3 { color: #333333; }
+#wrap .header * { color: #FFFFFF !important; }
+#wrap a:hover { color:#BC2A4D }
+
+/* Стили ссылок имен заголовков таблиц */
+#wrap thead a { color: #FFFFFF; }
+#wrap thead a:hover { color: #FFFF33; }
+
+/* Стили бордера всех фреймов */
+#wrap .forabg { background-color: #595959 !important }/* цвет - на главной форума */
+#wrap .forumbg { background: #595959 url(/forum/styles/prosilver/theme/images/bg_list.gif) repeat-x; }/* цвет - на внутренней форума */
+
+/* Стили бара навегации */
+#wrap .navbar { background-color:#EAEAEA !important }/* цвет */
+
+/* цвет - Стили фона подсветки названий тем */
+#wrap .bg1 { background-color:#F2F2F2 }
+#wrap .bg2 { background-color:#EAEAEA }
+#wrap .bg3 { background-color:#DDDDDD }
+#wrap li.row:hover { background-color: #F6F4D0; }
+
+
+/* цвет - Стили фона подсветки меню в личном разделе */
+#navigation a { background-color:#C1C1C1 }
+#navigation a:hover { background-color:#B8B8B8 }
+#navigation a:hover span { color:#BC2A4D }
+
+
+/* цвет - Стили бордера в поисковых формах */
+#wrap .inputbox:hover { border-color:#7E7E7E }
+#search-box input { border-color:#B0B0B0 }
+
+/* цвет - ссылок внутри постов */
+#wrap .postlink:hover { background-color:#F6F6F6; color:#BC2A4D }
+
+/* цвет - Стили подсветки фона листинга подстраниц в теме */
+#wrap .row .pagination span a:hover, li.pagination span a:hover { background-color:#D2D2D2; color:#FFFFFF; }/* возле имени темы */
+#wrap .pagination span strong { background-color: #BFBFBF; color: #FFFFFF; border-color:#BFBFBF }/* внизу темы - выбрана */
+#wrap .pagination span a:hover { background-color: #D2D2D2; color: #FFFFFF; border-color:#D2D2D2 }/* внизу темы */
+
+/* цвет - подсведка полей ввода данных после покидания курсора */
+#wrap .inputbox:focus { border-color:#EAEAEA }
+
+/* Стили цвета текста табов */
+#wrap #tabs a span {  }
+
+/* цвет - Фон панелей */
+.panel { background-color:#F0F0F0 }
+/*#wrap #options-panel, */#wrap #attach-panel, #wrap #poll-panel { background-color:#DBDBDB }
+/*#wrap .panel, #wrap #postingbox { background-color:#F0F0F0; }*//* форма авторизации и форма публикации сообщений */
+
+/* ссылки табов */
+#tabs .activetab a { border-bottom:0px }
+
+/* цвет - Фон панели пользователя */
+#cp-main .panel { background-color:#F9F9F9 }
+
+/* цвет - ссылки табов */
+#tabs a span { color:#6B6B6B }
+
+/* цвет - фон категорий форума после градиентного изображения */
+#wrap ul.forums { background-color:#F4F4F4 }
+
+/* цвет - в селектах */
+#wrap SELECT, #wrap OPTION, #wrap TEXTAREA, #wrap label { font-size:11px; color:#000 }
+#wrap TEXTAREA { font: 12px "Courier New",Arial,sans-serif; }
+
+/* цвет - подсветка фона строк при наведении */
+#wrap table.table1 tbody tr:hover, table.table1 tbody tr.hover { background-color:#FFFFCC}
+
+/*цвет - некоторых имен абзацев и элементов HR */
+#cp-main h3, #cp-main hr, #cp-menu hr { border-color:#CCC }
+
+#wrap .inputbox:hover {}/* элементы ввода данных при наведениии */
+#wrap .inputbox:focus { border:1px solid #BC2A4D }/* элементы ввода данных при получении курсора */
+
+blockquote, blockquote blockquote blockquote { background-color:#FFFFFF }
+blockquote blockquote { background-color:#F0F0F0 }
+
+dd.lastpost { width: 25%; font-size: 1.1em; text-align: center; }
+
+#page-footer ul.linklist { text-align:center; list-style:none; }
+#page-footer ul.linklist li, #page-footer ul.linklist li.rightside { float: none !important; display:inline }/*display: inline-table;*/
+#page-footer ul.linklist li.rightside { display:block !important; text-align:center }
+
+.icon-ucp { padding-left:19px; }
+
+body, a.forumtitle { font-family: Arial !important; }
+
+dl.file dd { font-size:10px; }
+
+.content { font-family: Arial,sans-serif !important; }
+.postprofile dd, .postprofile dt { font-size: 11px; }
+.postbody h3.first { font-size:15px; }
+a.right { background: none no-repeat 99% 60%; }
+.attachbox { margin:20px 0; }
+#wrap TH .rank-img { color: #FFF; }
+body { padding: 0px; }
+/*.inline-attachment .file { border:1px dotted #FF0000; padding:10px; background-color:#FFFFFF; }
+.inline-attachment { margin-bottom:-17px }*/
+/**************************************** Стили только для текущего сайта ***************************************************/
+#wrap { /*position: absolute; top: 65px; left: 50%; width: 980px !important; margin-left: -490px; padding: 0px;*/
+	margin: 0 auto;/* для нормальных браузеров и для ИЕ в strict mode*/
+    text-align: left;
+	width: 976px;
+	margin-top: 15px;
+}
+#wrap .navlinks #search { display: inline !important; }
+#wrap .navlinks #search-box { margin-top: 0px !important; }
+#wrap .navlinks #search-box FIELDSET { font-size:100% !important; }
+#wrap .navlinks #search-box A { font-size:100% !important; color: #0088CC !important; }
+#wrap .navlinks #search-box INPUT.search { border:1px solid #CCCCCC !important; width: 740px !important; }
+
+SPAN.keyButton {
+	background:none repeat scroll 0 0 #ECECEC;
+	border-color:#FFFFFF #BBB8AB #BBB8AB #FFFFFF;
+	border-style:solid;
+	border-width:1px;
+	padding:1px 4px;
+}
+/* Альтернативный Javascript-поиск от Google */
+.myGoogleSearchStyles .gsc-control {
+	width: 100%;
+}
+.myGoogleSearchStyles .gsc-tabsArea, 
+.myGoogleSearchStyles .gs-watermark, 
+.myGoogleSearchStyles .gsc-resultsHeader, 
+.myGoogleSearchStyles .gs-result a.gs-visibleUrl, 
+.myGoogleSearchStyles .gs-result .gs-visibleUrl {
+	display: none;
+}
+#googleSearchResult,
+.myGoogleSearchStyles .gs-result .gs-title, 
+.myGoogleSearchStyles .gs-snippet, 
+.myGoogleSearchStyles .gs-result .gs-title * {
+	font-size: 12px;
+}
+.myGoogleSearchStyles .gsc-result {
+	margin-bottom: 17px;
+}
+.gsc-results .gsc-cursor-box .gsc-cursor-page {
+	color:#000000;
+	cursor:pointer;
+	display:inline;
+	margin-right:8px;
+	text-decoration:none;
+	font-size: 12px;
+}
+.myGoogleSearchStyles .gsc-cursor-current-page {
+	color:#FF0000 !important;
+}
+
+/* Центрируем блок */
+.centerOuter {
+	text-align: center;/* для ИЕ в quirks mode и для ИЕ младше ИЕ6 */
+}
+.centerInner {
+    margin: 0 auto;/* для нормальных браузеров и для ИЕ в strict mode*/
+    text-align: left;
+	width: 976px;
+}
+/* Верхний блок */
+#logo {
+	padding: 25px 5px 0 10px;
+	vertical-align: top;
+}
+#logo A {
+	border:none;
+	outline:none; 
+}
+#topBox {
+	position: absolute;
+	top: 0px;
+	left: 0;
+	width: 100%;
+	background-color: #FFFFFF;
+}
+#topBoxInner {
+	color:#FFF;
+	width: 976px;
+	text-align: center;
+	border-bottom:1px dashed #DDDDDD;
+}
+#topBoxMenu {
+	text-align: right;
+	padding-top: 5px;
+	padding-right: 15px;
+}
+#topBoxMenu SPAN {
+	color:#CCCCCC;
+	font-size:1.1em;
+	margin: 0 10px;
+}
+#topBoxMenu A {
+	border:0 none;
+	color:#0088CC;
+	/* text-shadow:1px 1px 1px #DDD; */
+}
+#topBoxMenu A:hover {
+	color:#BC2A4D;
+}
+#topMenu {
+	white-space:nowrap;
+	text-align:right;
+	color:#545454;
+	padding: 9px 18px 7px 0;
+	font-size: 12px;
+}
+#footerCopyrights {
+	border-top:1px dashed #DDDDDD;
+	color:#5F5E62;
+	font-size:10px;
+	padding:15px 0 5px;
+	width:976px;
+	margin-top:10px;
+}
+/* Поисковые стили */
+.Search {
+	padding: 5px 7px 6px 7px;
+	vertical-align: bottom;
+	width: auto;
+	*padding-bottom: 3px;/* IE 7*/
+}
+.Search TABLE {
+	text-align: right;
+	height:19px;
+	width: 100%;
+}
+.Search TD {
+	border: 0px none !important;
+}
+TD.SearchSubmit, TD.SearchField, TD.SearchRight {
+	background: transparent url(/images/elements/search.png) no-repeat !important;
+}
+TD.SearchSubmit { 
+	border: 0px none; 
+	padding: 0px;  
+	width: 19px;
+}
+TD.SearchSubmit INPUT { 
+	border: 0px none; 
+	padding: 0px; 
+	width: 19px;
+	background: transparent !important;
+	cursor: pointer;
+	font-size: 12px;/* должно быть равным 12 px для IE 7 */
+}
+TD.SearchField { 
+	border: 0px none;
+	padding: 0px;
+	background-repeat: repeat-x !important;
+	background-position: 0 -19px !important;
+}
+TD.SearchField INPUT { 
+	border: 0px none; 
+	padding: 0px; 
+	width: 100%;
+	background: transparent;
+	font-family: Arial,Helvetica,sans-serif; 
+	font-style:oblique;
+	text-align: left; 
+	outline:none;/* fix чтобы убрать выделение подсветкой в Safari */
+}
+TD.SearchRight {
+	border: 0px none;
+	padding: 0px;
+	background-position: 0 -38px !important;
+	width: 10px;
+}
+/* результат поиска */
+.SearchResult {
+	padding: 10px 0px 10px 0px;
+}
+#search_dir {
+	border: none; 
+	border-bottom:1px dashed #DDD; 
+	background-color: transparent; 
+	width:99%; 
+	outline:none; 
+	font-size:11.5px; 
+	color: #545454;
+}
+IMG {
+  azimuth: expression(
+    this.pngSet?
+      this.pngSet=true : 
+        (this.nodeName == "IMG" ? 
+          (this.src.toLowerCase().indexOf('.png')>-1 ? 
+            (this.runtimeStyle.backgroundImage = "none", this.runtimeStyle.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + this.src + "', sizingMethod='image')",
+                this.src = "/images/pixel.gif") :
+            '') :
+          (this.currentStyle.backgroundImage.toLowerCase().indexOf('.png')>-1) ?
+            (this.origBg = (this.origBg) ? 
+              this.origBg :             
+              this.currentStyle.backgroundImage.toString().replace('url("','').replace('")',''),
+              this.runtimeStyle.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + this.origBg + "', sizingMethod='crop')",
+              this.runtimeStyle.backgroundImage = "none") :
+            ''
+        ), this.pngSet=true
+  );
+}
+#topBox, #topBox A {
+	font-size: 13px;
+}
+
+#topBoxInner {
+	height: 94px;
+}
+#user_home_link {
+    background: url("/images/yapro/user_home_link.gif") no-repeat scroll 0 2px transparent;
+    padding-left: 19px;
+}
+.Hidden, .hidden {
+	position: absolute;
+	top: -7777777px;
+	left: -7777777px;
+}
+
+/* закругленные уголки */
+.round {
+	border: 1px solid #FFF;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	-khtml-border-radius: 5px;
+}
+
+/* RSS-меню */
+#rssBoxLinks {
+	z-index:123;
+	padding-top: 13px;
+}
+#rssBoxLinks DIV {
+	padding: 1px 15px 2px 15px;
+	border: 1px solid #CCC;
+	border-top: none;
+	background-color: #FFF;
+}
+#rssBoxLinks A {
+	display:block;
+	height: 27px;
+	text-align: left;
+	font-style: italic;
+	font-size: 12px;
+	background: url(/rss-feed.gif) no-repeat scroll 0 0 transparent;
+	padding-left: 21px;
+}

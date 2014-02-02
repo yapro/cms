@@ -1,0 +1,74 @@
+.rating, .rating li a:hover, .rating li.current { background: url("/js/rating/love.gif") top left repeat-x }/* фон с звездочками */
+.rating {
+		font-size: 11px;
+		line-height: normal;
+		list-style: none !important;
+		list-style-type: none !important;
+		margin: 0px !important;
+		padding:0px !important;
+		width: 170px;
+		height: 16px;
+		position: relative
+}
+.rating li{
+	    list-style-image: none;
+	    text-indent: -90000px;/* Устанавливает величину отступа первой строки блока текста  */
+		padding:0px !important;
+		margin:0px !important;
+		float: left;
+}
+.rating li a{
+		display:block;
+		width:17px;
+		height: 16px;
+		text-decoration: none;
+		text-indent: -9000px;
+		z-index: 17;
+		position: absolute;
+		padding: 0px;
+}
+.rating li a:hover {
+		background-position: left bottom;
+		z-index: 2;
+		left: 0px;
+}
+.rating li a:active, 
+.rating li a:hover, 
+.rating li a:visited, 
+.rating li a:hover:visited {
+	outline: medium none;
+}
+.rating a { border: none; margin:0px; }
+.rating a.r1 {left: 0px}
+.rating a.r1:hover {width:17px}
+.rating a.r2 {left:17px}
+.rating a.r2:hover {width: 34px}
+.rating a.r3 {left: 34px}
+.rating a.r3:hover {width: 51px}
+.rating a.r4 {left: 51px}
+.rating a.r4:hover {width: 68px}
+.rating a.r5 {left: 68px}
+.rating a.r5:hover {width: 85px}
+.rating a.r6 {left: 85px}
+.rating a.r6:hover {width: 102px}
+.rating a.r7 {left: 102px}
+.rating a.r7:hover {width: 119px}
+.rating a.r8 {left: 119px}
+.rating a.r8:hover {width: 136px}
+.rating a.r9 {left: 136px}
+.rating a.r9:hover {width: 153px}
+.rating a.r10 {left: 153px}
+.rating a.r10:hover {width: 170px}
+.rating li.current {
+		background-position: left center;
+		position: absolute;
+		height: 16px;
+		display: block;
+		text-indent: -9000px;
+		z-index: 1;
+}
+/* Свои стили оформления */
+.TableRating { margin-left:0px }
+.TableRating TD { /*font-size:11px*/ }
+.TableRating .rating_left { padding-right:3px; }
+.TableRating .rating_right { padding-left:5px; }
