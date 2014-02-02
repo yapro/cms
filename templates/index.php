@@ -2,9 +2,6 @@
 <style>
 
 </style>
-<script type="text/javascript">
-
-</script>
 <div class="centerOuter">
 	<div class="centerInner Site">
 		<div id="body" class="colmask leftmenu">
@@ -32,4 +29,7 @@
 		</div>
 	</div>
 </div>
+<script type="text/javascript">
+
+</script>
 {~templates/html/bottom.php~}
