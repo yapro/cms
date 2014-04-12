@@ -749,6 +749,17 @@ function error($text='не указана', $file='', $without_mail=false){
 	($_GET?"-----------------------GET-----------------------\n".print_r($_GET, true)."\n":'').
 	($_POST?"------------------------POST----------------------\n".print_r($_POST, true)."\n":'').
 	($_FILES?"------------------------FILES----------------------\n".print_r($_FILES, true):'');
+
+	if( $trace = debug_backtrace() ){
+		$errors = '';
+		foreach($trace as $a){
+			unset($a['args']);
+			$errors = print_r($a,1) . $errors;
+		}
+        	$error .= "------------------------TRACE----------------------\n".$errors;
+	}
+
+	trigger_error('See details in file: uploads/hash.log', E_USER_NOTICE);
 	
 	log_($error,$file);
 	
