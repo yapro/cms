@@ -1,5 +1,5 @@
 <?php
-error_reporting(E_ERROR | E_PARSE | E_COMPILE_ERROR);
+error_reporting(E_ERROR | E_PARSE | E_COMPILE_ERROR | E_USER_NOTICE);
 $dbms = 'mysql';
 $dbhost = 'you_host';
 $dbport = '';
